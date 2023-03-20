@@ -211,7 +211,7 @@ font-family: 'Roboto', sans-serif; */
   }
 }
 .footer {
-  background-image: url("/public/images/bkgroundFooter.svg");
+  background-image: url("./images/bkgroundFooter.svg");
   padding-top: 32px;
 }
 .footer__mapContainer {
@@ -355,7 +355,7 @@ font-family: 'Roboto', sans-serif; */
 }
 /* home page */
 .banner {
-  background-image: url("/public/images/bannerBackground.webp");
+  background-image: url("./images/bannerBackground.webp");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -415,7 +415,7 @@ font-family: 'Roboto', sans-serif; */
   cursor: text;
 }
 .banner__form__dateInput::-webkit-calendar-picker-indicator {
-  background-image: url("/public/images/calendaricon.svg");
+  background-image: url("./images/calendaricon.svg");
   position: absolute;
   left: 0;
   top: 0;
@@ -461,7 +461,7 @@ font-family: 'Roboto', sans-serif; */
   position: relative;
 }
 .aboutUs__presentation {
-  background-image: url("/public/images/aboutUsBackground.webp");
+  background-image: url("./images/aboutUsBackground.webp");
   background-position: center;
   background-size: cover;
 }
@@ -510,14 +510,14 @@ font-family: 'Roboto', sans-serif; */
   color: #111;
 }
 .aboutUs__subSection__salient-variant1 {
-  background-image: url("/public/images/people.svg");
+  background-image: url("./images/people.svg");
   background-position: 100% 25%;
   box-shadow: 0px 8px 16px rgba(34, 34, 34, 0.02);
 }
 .aboutUs__subSection__salient-variant2 {
   background-color: #222;
   color: #fff;
-  background-image: url("/public/images/calendar.svg");
+  background-image: url("./images/calendar.svg");
   background-position: 50% 25%;
 }
 .aboutUs__subSection__salient-title {
@@ -841,7 +841,7 @@ font-family: 'Roboto', sans-serif; */
 }
 .menu {
   padding-top: 156px;
-  background-image: url("/public/images/menuBackground.svg");
+  background-image: url("./images/menuBackground.svg");
   background-repeat: no-repeat;
   background-size: 115px;
   background-position: calc(100% + 25px) 3%;
@@ -906,7 +906,7 @@ font-family: 'Roboto', sans-serif; */
 }
 .menu__options-activeOption::after {
   content: "";
-  background-image: url("/public/images/factArrowIcon.svg");
+  background-image: url("./images/factArrowIcon.svg");
   background-repeat: no-repeat;
   background-position: 0 50%;
   width: 35px;
@@ -1072,7 +1072,7 @@ font-family: 'Roboto', sans-serif; */
 }
 /* about us page */
 .pagesHeader {
-  background-image: url(/public/images/pageHeaderBackground.webp);
+  background-image: url("./images/pageHeaderBackground.webp");
   background-size: cover;
   background-position: bottom;
   background-attachment: fixed;
@@ -1688,7 +1688,7 @@ font-family: 'Roboto', sans-serif; */
   max-width: 330px;
 }
 .pageDetailsAvailability__form-date::-webkit-calendar-picker-indicator {
-  background-image: url("/public/images/calendarGreyIcon.svg");
+  background-image: url("./images/calendarGreyIcon.svg");
   position: absolute;
   right: 20px;
   top: 50%;
@@ -2091,17 +2091,17 @@ font-family: 'Roboto', sans-serif; */
   align-items: center;
 }
 .pageContactInfo__container > .info1 {
-  background-image: url("/public/images/number1Bkg.svg");
+  background-image: url("./images/number1Bkg.svg");
   background-repeat: no-repeat;
   background-position: bottom right;
 }
 .pageContactInfo__container > .info2 {
-  background-image: url("/public/images/number2Bkg.svg");
+  background-image: url("./images/number2Bkg.svg");
   background-repeat: no-repeat;
   background-position: bottom right;
 }
 .pageContactInfo__container > .info3 {
-  background-image: url("/public/images/number3Bkg.svg");
+  background-image: url("./images/number3Bkg.svg");
   background-repeat: no-repeat;
   background-position: bottom right;
 }

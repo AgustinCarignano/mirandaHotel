@@ -34,7 +34,7 @@
       position: relative;
       max-width: 330px;
       &::-webkit-calendar-picker-indicator {
-        background-image: url("/public/images/calendarGreyIcon.svg");
+        background-image: url("./images/calendarGreyIcon.svg");
         position: absolute;
         right: 20px;
         top: 50%;

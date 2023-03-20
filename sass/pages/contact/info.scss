@@ -8,17 +8,17 @@
     justify-content: space-between;
     align-items: center;
     & > .info1 {
-      background-image: url("/public/images/number1Bkg.svg");
+      background-image: url("./images/number1Bkg.svg");
       background-repeat: no-repeat;
       background-position: bottom right;
     }
     & > .info2 {
-      background-image: url("/public/images/number2Bkg.svg");
+      background-image: url("./images/number2Bkg.svg");
       background-repeat: no-repeat;
       background-position: bottom right;
     }
     & > .info3 {
-      background-image: url("/public/images/number3Bkg.svg");
+      background-image: url("./images/number3Bkg.svg");
       background-repeat: no-repeat;
       background-position: bottom right;
     }

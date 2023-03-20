@@ -1,5 +1,5 @@
 .banner {
-  background-image: url("/public/images/bannerBackground.webp");
+  background-image: url("./images/bannerBackground.webp");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -56,7 +56,7 @@
       position: relative;
       cursor: text;
       &::-webkit-calendar-picker-indicator {
-        background-image: url("/public/images/calendaricon.svg");
+        background-image: url("./images/calendaricon.svg");
         position: absolute;
         left: 0;
         top: 0;
