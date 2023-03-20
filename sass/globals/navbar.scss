@@ -1,0 +1,148 @@
+.header {
+  background-color: #222222;
+  &__container {
+    max-width: 1420px;
+    margin: 0 auto;
+  }
+  &__welcomeTextDesktop {
+    display: none;
+    text-align: left;
+    color: #fff;
+    font: $Roboto-400;
+    line-height: 18.75px;
+    padding: 10px 0;
+  }
+  &__navbar {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    padding: 2.5px 20px;
+    &__menu {
+      & > div {
+        width: 20px;
+        height: 1.5px;
+        background-color: #111;
+        margin: 4px 20px 4px 0;
+      }
+    }
+    &__brand {
+      // margin-left: 20px;
+      color: #111;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &-logo {
+        display: inline-block;
+        font: $Archivo-700;
+        text-align: center;
+        margin-right: 15px;
+        box-shadow: 0px 14px 24px rgba(139, 139, 139, 0.25);
+        line-height: 36px;
+        font-size: 18px;
+        width: 36px;
+      }
+      &-text {
+        font: $Archivo-400;
+        font-size: 13px;
+        line-height: 14px;
+        width: 60px;
+        // font-size: 13px;
+        // width: 140px;
+      }
+    }
+    &__linkList {
+      font: $Archivo-600;
+    }
+    &__link {
+      margin-right: 50px;
+    }
+    &__buttons {
+      margin-left: auto;
+      // margin-right: 120px;
+      &-icon {
+        display: inline-block;
+        position: relative;
+        margin: 0 10px;
+        text-align: center;
+        line-height: 65px;
+      }
+    }
+  }
+}
+
+.desktopNavbar {
+  display: none;
+}
+.mobileNavbar {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-top: 70px;
+  background-color: #fff;
+  width: 100%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.29);
+  padding: 30px 20px;
+  & > li {
+    margin: 25px 0;
+  }
+}
+.hidden {
+  display: none;
+}
+
+@media (min-width: 1000px) {
+  .header {
+    &__welcomeTextDesktop {
+      display: block;
+    }
+    &__navbar {
+      margin-bottom: -60px;
+      position: relative;
+      padding: 20px;
+      &__menu {
+        display: none;
+      }
+      &__brand {
+        &-logo {
+          margin-right: 28px;
+          line-height: 80px;
+          font-size: 40px;
+          width: 80px;
+        }
+        &-text {
+          font-size: 26px;
+          line-height: 28.3px;
+          width: 140px;
+        }
+      }
+      &__linkList {
+        margin: 0 auto 0 120px;
+      }
+      &__buttons {
+        display: flex;
+        margin-right: 120px;
+        gap: 20px;
+        &-icon {
+          margin: 0;
+          font-size: 30px;
+          padding: 0 20px;
+          //border: solid 2px #8585854d;
+        }
+      }
+    }
+  }
+  .desktopNavbar {
+    display: flex;
+    min-width: 430px;
+  }
+  .mobileNavbar {
+    display: none;
+  }
+}

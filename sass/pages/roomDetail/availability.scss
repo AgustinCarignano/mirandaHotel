@@ -1,0 +1,55 @@
+.pageDetailsAvailability {
+  padding: 0 20px;
+  &__title {
+    font: $Archivo-700;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: -0.54px;
+    text-align: center;
+  }
+  &__formContainer {
+    width: 100%;
+    max-width: 330px;
+    margin: 15px 0 28px;
+    padding: 20px;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 10px;
+    &-label {
+      font: $Archivo-700;
+      font-size: 14px;
+      line-height: 15.2px;
+    }
+    &-date {
+      border: none;
+      background-color: #f8f8f8;
+      font: $Archivo-400;
+      font-size: 14px;
+      line-height: 15.2px;
+      color: #777;
+      padding: 21px 0 21px 30px;
+      position: relative;
+      max-width: 330px;
+      &::-webkit-calendar-picker-indicator {
+        background-image: url("/public/images/calendarGreyIcon.svg");
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        bottom: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    &-btn {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .pageDetailsAvailability {
+    width: 330px;
+  }
+}

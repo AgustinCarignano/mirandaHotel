@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="/public/styles.css" />
+    <title>Room Details</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <p class="header__welcomeTextDesktop">We Make You Feel Comfortable</p>
+        <nav class="header__navbar">
+          <div class="header__navbar__menu">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="header__navbar__brand">
+            <a href="/index.html">
+              <span class="header__navbar__brand-logo">H</span>
+            </a>
+            <a href="/index.html">
+              <p class="header__navbar__brand-text"><b>HOTEL</b> MIRANDA</p>
+            </a>
+          </div>
+          <ul class="header__navbar__linkList desktopNavbar">
+            <li class="header__navbar__link">
+              <a href="./aboutUs.html">About Us</a>
+            </li>
+            <li class="header__navbar__link">
+              <a href="./roomsGrid.html">Rooms</a>
+            </li>
+            <li class="header__navbar__link">
+              <a href="./offers.html">Offers</a>
+            </li>
+            <li class="header__navbar__link">
+              <a href="./contact.html">Contact</a>
+            </li>
+          </ul>
+          <div class="header__navbar__buttons">
+            <figure class="header__navbar__buttons-icon">
+              <img src="/public/images/userIcon.svg" alt="user icon" />
+            </figure>
+            <figure class="header__navbar__buttons-icon">
+              <img src="/public/images/searchIcon.svg" alt="search icon" />
+            </figure>
+          </div>
+        </nav>
+        <ul class="header__navbar__linkList mobileNavbar hidden">
+          <li class="header__navbar__link">
+            <a href="./aboutUs.html">About Us</a>
+          </li>
+          <li class="header__navbar__link">
+            <a href="./roomsGrid.html">Rooms</a>
+          </li>
+          <li class="header__navbar__link">
+            <a href="./offers.html">Offers</a>
+          </li>
+          <li class="header__navbar__link">
+            <a href="./contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <section class="pagesHeader">
+        <div class="pagesHeader__background">
+          <div class="pagesHeader__container">
+            <h4 class="homeSubtitle pagesHeader__subtitle">
+              THE ULTIMATE LUXURY
+            </h4>
+            <h1 class="homeTitle pagesHeader__title">Ultimate Room</h1>
+            <div class="pagesHeader__breadcrumbs">
+              <a href="#">Home &nbsp</a>
+              |
+              <a class="active" href="#">&nbsp Room Details</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="pageDetailsLayout">
+        <div class="pageDetailsLayout-block">
+          <section class="pageDetailsPresentation">
+            <div class="pageDetailsPresentation__container">
+              <div class="pageDetailsPresentation__header">
+                <h4 class="homeSubtitle pageDetailsPresentation__subtitle">
+                  DOUBLE BED
+                </h4>
+                <h2 class="homeTitle pageDetailsPresentation__title">
+                  Luxury Double Bed
+                </h2>
+              </div>
+              <p class="pageDetailsPresentation__price">
+                $345<small>/Night</small>
+              </p>
+            </div>
+            <figure class="pageDetailsPresentation__img">
+              <img src="" alt="" />
+            </figure>
+          </section>
+          <section class="pageDetailsAvailability">
+            <h3 class="pageDetailsAvailability__title">Check Availability</h3>
+            <div class="pageDetailsAvailability__formContainer">
+              <form class="pageDetailsAvailability__form">
+                <label class="pageDetailsAvailability__form-label" for="checkIn"
+                  >Check In</label
+                >
+                <input
+                  class="pageDetailsAvailability__form-date"
+                  type="date"
+                  name="checkIn"
+                  id="checkIn"
+                  value="2023-06-14"
+                />
+                <label class="pageDetailsAvailability__form-label" for="checkIn"
+                  >Check Out</label
+                >
+                <input
+                  class="pageDetailsAvailability__form-date"
+                  type="date"
+                  name="checkOut"
+                  id="checkOut"
+                  value="2023-06-16"
+                />
+                <input
+                  class="button button-variant1 pageDetailsAvailability__form-btn"
+                  type="submit"
+                  value="CHECK AVAILABILITY"
+                />
+              </form>
+            </div>
+          </section>
+        </div>
+        <section class="pageDetailsDescription">
+          <p class="pageDetailsDescription__text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum. Sed ut
+            perspiciatis unde omnis iste natus error sit voluptatem accusantium
+            doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
+            inventore veritatis et quasi architecto beatae vitae dicta sunt
+            explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur
+            aut odit aut fugit, sed quia consequuntur magni dolores eos qui
+            ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui
+            dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed
+            quia non numquam eius modi tempora incidunt ut labore et dolore
+            magnam aliquam quaerat voluptatem.
+          </p>
+        </section>
+        <section class="pageDetailsAmenities">
+          <h2 class="pageDetailsAmenities__title">Amenities</h2>
+          <hr />
+          <div class="pageDetailsAmenities__container">
+            <div class="pageDetailsAmenities__items">
+              <img
+                class="pageDetailsAmenities__items-img"
+                src="/public/images/amenities/airCondIcon.svg"
+                alt=""
+              />
+              <p class="pageDetailsAmenities__items-text">Air Conditioner</p>
+            </div>
+            <div class="pageDetailsAmenities__items">
+              <img
+                class="pageDetailsAmenities__items-img"
+                src="/public/images/amenities/wifiIcon.svg"
+                alt=""
+              />
+              <p class="pageDetailsAmenities__items-text">High speed WiFi</p>
+            </div>
+            <div class="pageDetailsAmenities__items">
+              <img
+                class="pageDetailsAmenities__items-img"
+                src="/public/images/amenities/breakIcon.svg"
+                alt=""
+              />
+              <p class="pageDetailsAmenities__items-text">Breakfast</p>
+            </div>
+            <div class="pageDetailsAmenities__items">
+              <img
+                class="pageDetailsAmenities__items-img"
+                src="/public/images/amenities/kitchenIcon.svg"
+                alt=""
+              />
+              <p class="pageDetailsAmenities__items-text">Kitchen</p>
+            </div>
+            <div class="pageDetailsAmenities__items">
+              <img
+                class="pageDetailsAmenities__items-img"
+                src="/public/images/amenities/cleanIcon.svg"
+                alt=""
+              />
+              <p class="pageDetailsAmenities__items-text">Cleaning</p>
+            </div>
+            <div class="pageDetailsAmenities__items">
+              <img
+                class="pageDetailsAmenities__items-img"
+                src="/public/images/amenities/showerIcon.svg"
+                alt=""
+              />
+              <p class="pageDetailsAmenities__items-text">Shower</p>
+            </div>
+            <div class="pageDetailsAmenities__items">
+              <img
+                class="pageDetailsAmenities__items-img"
+                src="/public/images/amenities/groscerIcon.svg"
+                alt=""
+              />
+              <p class="pageDetailsAmenities__items-text">Grocery</p>
+            </div>
+            <div class="pageDetailsAmenities__items">
+              <img
+                class="pageDetailsAmenities__items-img"
+                src="/public/images/amenities/bedIcon.svg"
+                alt=""
+              />
+              <p class="pageDetailsAmenities__items-text">Single bed</p>
+            </div>
+            <div class="pageDetailsAmenities__items">
+              <img
+                class="pageDetailsAmenities__items-img"
+                src="/public/images/amenities/shopIcon.svg"
+                alt=""
+              />
+              <p class="pageDetailsAmenities__items-text">Shop near</p>
+            </div>
+            <div class="pageDetailsAmenities__items">
+              <img
+                class="pageDetailsAmenities__items-img"
+                src="/public/images/amenities/towelIcons.svg"
+                alt=""
+              />
+              <p class="pageDetailsAmenities__items-text">Towels</p>
+            </div>
+            <div class="pageDetailsAmenities__items">
+              <img
+                class="pageDetailsAmenities__items-img"
+                src="/public/images/amenities/suppotIcon.svg"
+                alt=""
+              />
+              <p class="pageDetailsAmenities__items-text">
+                24/7 Online Support
+              </p>
+            </div>
+            <div class="pageDetailsAmenities__items">
+              <img
+                class="pageDetailsAmenities__items-img"
+                src="/public/images/amenities/lockerIcon.svg"
+                alt=""
+              />
+              <p class="pageDetailsAmenities__items-text">Strong Locker</p>
+            </div>
+            <div class="pageDetailsAmenities__items">
+              <img
+                class="pageDetailsAmenities__items-img"
+                src="/public/images/amenities/securIcon.svg"
+                alt=""
+              />
+              <p class="pageDetailsAmenities__items-text">Smart Security</p>
+            </div>
+            <div class="pageDetailsAmenities__items">
+              <img
+                class="pageDetailsAmenities__items-img"
+                src="/public/images/amenities/expertIcon.svg"
+                alt=""
+              />
+              <p class="pageDetailsAmenities__items-text">Expert Team</p>
+            </div>
+          </div>
+        </section>
+        <section class="pageDetailsPerson">
+          <div class="pageDetailsPerson__avatar">
+            <img class="pageDetailsPerson__avatar-person" src="" alt="avatar" />
+            <img
+              class="pageDetailsPerson__avatar-check"
+              src="/public/images/checkIcon.svg"
+              alt=""
+            />
+          </div>
+          <h3 class="pageDetailsPerson__title">Rosalina D. William</h3>
+          <h6 class="pageDetailsPerson__subtitle">FOUNDER, QUX CO.</h6>
+          <p class="pageDetailsPerson__text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore.
+          </p>
+        </section>
+        <section class="pageDetailsCancellation">
+          <h2 class="pageDetailsCancellation__title">Cancellation</h2>
+          <hr />
+          <p class="pageDetailsCancellation__text">
+            Phasellus volutpat neque a tellus venenatis, a euismod augue
+            facilisis. Fusce ut metus mattis, consequat metus nec, luctus
+            lectus. Pellentesque orci quis hendrerit sed eu dolor. Cancel up to
+            14 days to get a full refund.
+          </p>
+        </section>
+        <section class="pageDetailsRelated">
+          <h2 class="pageDetailsRelated__title">Related Rooms</h2>
+          <hr />
+          <div class="rooms__slider pageDetailsRelated__slider">
+            <div class="swiper rooms__slider__swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="/public/images/hotelRoom1.webp" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="/public/images/hotelRoom2.webp" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="/public/images/hotelRoom3.webp" alt="" />
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+            <div class="pageDetailsRelated__iconsBar">
+              <img src="/public/images/bedIcon.svg" alt="" />
+              <img src="/public/images/wifiIcon.svg" alt="" />
+              <img src="/public/images/carIcon.svg" alt="" />
+              <img src="/public/images/snowIcon.svg" alt="" />
+              <img src="/public/images/barbellIcon.svg" alt="" />
+              <img src="/public/images/nosmokeIcon.svg" alt="" />
+              <img src="/public/images/carIcon.svg" alt="" />
+            </div>
+            <div class="pageRoomsList__legend">
+              <h3 class="pageRoomsList__legend-title">Minimal Duplex Room</h3>
+              <p class="pageRoomsList__legend-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor.
+              </p>
+              <p class="pageRoomsList__legend-price">
+                $345/Night &nbsp<a href="#">&nbsp Booking Now</a>
+              </p>
+            </div>
+          </div>
+          <div class="pageDetailsRelated__largeContainer">
+            <div class="pageDetailsRelated__largeContainer-item">
+              <figure class="pageDetailsRelated__largeContainer__img">
+                <img src="/public/images/hotelRoom1.webp" alt="" />
+              </figure>
+              <div class="pageDetailsRelated__iconsBar">
+                <img src="/public/images/bedIcon.svg" alt="" />
+                <img src="/public/images/wifiIcon.svg" alt="" />
+                <img src="/public/images/carIcon.svg" alt="" />
+                <img src="/public/images/snowIcon.svg" alt="" />
+                <img src="/public/images/barbellIcon.svg" alt="" />
+                <img src="/public/images/nosmokeIcon.svg" alt="" />
+                <img src="/public/images/carIcon.svg" alt="" />
+              </div>
+              <div class="pageRoomsList__legend">
+                <h3 class="pageRoomsList__legend-title">Minimal Duplex Room</h3>
+                <p class="pageRoomsList__legend-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor.
+                </p>
+                <p class="pageRoomsList__legend-price">
+                  $345/Night &nbsp<a href="#">&nbsp Booking Now</a>
+                </p>
+              </div>
+            </div>
+            <div class="pageDetailsRelated__largeContainer-item">
+              <figure class="pageDetailsRelated__largeContainer__img">
+                <img src="/public/images/hotelRoom1.webp" alt="" />
+              </figure>
+              <div class="pageDetailsRelated__iconsBar">
+                <img src="/public/images/bedIcon.svg" alt="" />
+                <img src="/public/images/wifiIcon.svg" alt="" />
+                <img src="/public/images/carIcon.svg" alt="" />
+                <img src="/public/images/snowIcon.svg" alt="" />
+                <img src="/public/images/barbellIcon.svg" alt="" />
+                <img src="/public/images/nosmokeIcon.svg" alt="" />
+                <img src="/public/images/carIcon.svg" alt="" />
+              </div>
+              <div class="pageRoomsList__legend">
+                <h3 class="pageRoomsList__legend-title">Minimal Duplex Room</h3>
+                <p class="pageRoomsList__legend-text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor.
+                </p>
+                <p class="pageRoomsList__legend-price">
+                  $345/Night &nbsp<a href="#">&nbsp Booking Now</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__mapContainer">
+        <div class="footer__column1">
+          <div class="footer__brand">
+            <span class="footer__brand-logo">H</span>
+            <p class="footer__brand-text"><b>HOTEL</b> MIRANDA</p>
+          </div>
+          <p class="footer__column1-text">
+            Lorem ipsum dolor sit amet, consect etur adipisicing elit, sed doing
+            eius mod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitat ion ullamco laboris nisi.
+          </p>
+          <div class="footer__column1-icons">
+            <img src="./public/images/facebookIcon.svg" alt="" />
+            <img src="./public/images/twitterIcon.svg" alt="" />
+            <img src="./public/images/beIcon.svg" alt="" />
+            <img src="./public/images/linkedinIcon.svg" alt="" />
+            <img src="./public/images/youtubeIcon.svg" alt="" />
+          </div>
+        </div>
+        <div class="footer__column2">
+          <h2 class="footer__title">Services.</h2>
+          <ul class="footer__list">
+            <li class="footer__list__link">Restaurant & Bar</li>
+            <li class="footer__list__link">Gaming Zone</li>
+            <li class="footer__list__link">Swimming Pool</li>
+            <li class="footer__list__link">Marrige Party</li>
+            <li class="footer__list__link">Wellness & Spa</li>
+            <li class="footer__list__link">Party Planning</li>
+            <li class="footer__list__link">Restaurant</li>
+            <li class="footer__list__link">Tour Consultancy</li>
+            <li class="footer__list__link">Conference Room</li>
+            <li class="footer__list__link">Coctail Party House</li>
+          </ul>
+        </div>
+        <div class="footer__column3">
+          <h2 class="footer__title">Contact Us.</h2>
+          <div class="footer__contactData">
+            <img src="./public/images/phoneIcon.svg" alt="" />
+            <div class="footer__contactData-cont">
+              <h4 class="footer__contactData-title">Phone Number</h4>
+              <p class="footer__contactData-text">+987 354 128 76 547</p>
+            </div>
+          </div>
+          <div class="footer__contactData">
+            <img src="./public/images/emailIcon.svg" alt="" />
+            <div class="footer__contactData-cont">
+              <h4 class="footer__contactData-title">Phone Number</h4>
+              <p class="footer__contactData-text">+987 354 128 76 547</p>
+            </div>
+          </div>
+          <div class="footer__contactData">
+            <img src="./public/images/mappinIcon.svg" alt="" />
+            <div class="footer__contactData-cont">
+              <h4 class="footer__contactData-title">Phone Number</h4>
+              <p class="footer__contactData-text">+987 354 128 76 547</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__legalContainer">
+        <div class="footer__legalContainer__content">
+          <h5 class="footer__legalContainer__text">
+            Copyrigth by Agustin Carignano - 2023
+          </h5>
+          <h5 class="footer__legalContainer__text">
+            <a class="footer__legalContainer__link" href="#"
+              >Terms of use &nbsp</a
+            >
+            |
+            <a class="footer__legalContainer__link" href="#"
+              >&nbsp Privacy Environmental Policy</a
+            >
+          </h5>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="/public/index.js"></script>
+  </body>
+</html>

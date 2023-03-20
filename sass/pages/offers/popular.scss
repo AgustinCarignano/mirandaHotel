@@ -1,0 +1,70 @@
+.pageOfferPopular {
+  background-color: #222;
+  padding: 20px;
+  margin-bottom: 60px;
+  &__container {
+    width: 100%;
+    max-width: 500px;
+    margin: 28px auto;
+    text-align: center;
+  }
+  &__subtitle {
+    font: $Archivo-400;
+    font-size: 14px;
+    line-height: 15px;
+    letter-spacing: 2.8px;
+    color: #bdac8d;
+  }
+  &__title {
+    font: $OldStandard-400;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.8px;
+    color: #fff;
+    margin: 25px auto 48px;
+  }
+  &__slider {
+    @extend .pageDetailsRelated__slider;
+    background-color: #fff;
+    & > .pageRoomsList__legend {
+      margin-bottom: 28px;
+    }
+  }
+  &__largeContainer {
+    display: none;
+  }
+}
+
+@media (min-width: 1000px) {
+  .pageOfferPopular {
+    &__container {
+      max-width: 1170px;
+      margin: 40px auto 100px;
+    }
+    &__title {
+      font-size: 80px;
+      line-height: 80px;
+      letter-spacing: -2.4px;
+      margin: 80px auto;
+    }
+    &__slider {
+      display: none;
+    }
+    &__largeContainer {
+      display: flex;
+      gap: 30px;
+      &-item {
+        background-color: #fff;
+        & > .pageRoomsList__legend {
+          margin-bottom: 28px;
+        }
+      }
+      &__img {
+        width: 100%;
+        & > img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

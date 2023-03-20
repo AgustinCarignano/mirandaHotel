@@ -1,0 +1,47 @@
+.pageDetailsRelated {
+  padding: 20px;
+  margin: 60px 0;
+  //max-width: 500px;
+  &__title {
+    @extend .pagesSecundaryTitle;
+  }
+  & > hr {
+    width: 100%;
+    border-color: #f1f1f1;
+    margin: 13px 0 35px;
+  }
+  &__slider {
+    max-width: 365px;
+  }
+  &__iconsBar {
+    @extend .pageRoomsGrid__iconsBar;
+  }
+  &__largeContainer {
+    display: none;
+  }
+}
+
+@media (min-width: 1000px) {
+  .pageDetailsRelated {
+    &__slider {
+      display: none;
+    }
+    &__largeContainer {
+      display: flex;
+      gap: 30px;
+      &-item {
+        background-color: #fff;
+        max-width: 370px;
+        & > .pageRoomsList__legend {
+          margin-bottom: 28px;
+        }
+      }
+      &__img {
+        width: 100%;
+        & > img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
