@@ -16,7 +16,7 @@
       <div class="header__container">
         <p class="header__welcomeTextDesktop">We Make You Feel Comfortable</p>
         <nav class="header__navbar">
-          <div class="header__navbar__menu">
+          <div class="header__navbar__menu" id="burgerBtn">
             <div></div>
             <div></div>
             <div></div>
@@ -34,7 +34,7 @@
               <a href="./public/pages/aboutUs.html">About Us</a>
             </li>
             <li class="header__navbar__link">
-              <a href="./public/pages/rooms.html">Rooms</a>
+              <a href="./public/pages/roomsGrid.html">Rooms</a>
             </li>
             <li class="header__navbar__link">
               <a href="./public/pages/offers.html">Offers</a>
@@ -52,7 +52,10 @@
             </figure>
           </div>
         </nav>
-        <ul class="header__navbar__linkList mobileNavbar hidden">
+        <ul
+          class="header__navbar__linkList mobileNavbar initialHidden hidden"
+          id="mobileNavbar"
+        >
           <li class="header__navbar__link">
             <a href="./public/pages/aboutUs.html">About Us</a>
           </li>
@@ -249,6 +252,7 @@
             <div class="facilityActive">
               <figure class="facilities__slider__imgs">
                 <img src="./public/images/facilities1.svg" alt="" />
+                <span>01</span>
               </figure>
               <h3 class="facilities__slider__title">Have High Rating</h3>
               <p class="facilities__slider__text">
@@ -259,6 +263,7 @@
             <div class="facilityInactive">
               <figure class="facilities__slider__imgs">
                 <img src="./public/images/facilities2.svg" alt="" />
+                <span>02</span>
               </figure>
               <h3 class="facilities__slider__title">Quiet Hours</h3>
               <p class="facilities__slider__text">
@@ -269,6 +274,7 @@
             <div class="facilityInactive">
               <figure class="facilities__slider__imgs">
                 <img src="./public/images/facilities3.svg" alt="" />
+                <span>03</span>
               </figure>
               <h3 class="facilities__slider__title">Best Locations</h3>
               <p class="facilities__slider__text">
@@ -279,6 +285,7 @@
             <div class="facilityInactive">
               <figure class="facilities__slider__imgs">
                 <img src="./public/images/facilities4.svg" alt="" />
+                <span>04</span>
               </figure>
               <h3 class="facilities__slider__title">Free Cancellation</h3>
               <p class="facilities__slider__text">
@@ -289,6 +296,7 @@
             <div class="facilityInactive">
               <figure class="facilities__slider__imgs">
                 <img src="./public/images/facilities5.svg" alt="" />
+                <span>05</span>
               </figure>
               <h3 class="facilities__slider__title">Payment Options</h3>
               <p class="facilities__slider__text">
@@ -299,6 +307,7 @@
             <div class="facilityInactive">
               <figure class="facilities__slider__imgs">
                 <img src="./public/images/facilities6.svg" alt="" />
+                <span>06</span>
               </figure>
               <h3 class="facilities__slider__title">Special Offers</h3>
               <p class="facilities__slider__text">
@@ -512,21 +521,26 @@
             <img src="./public/images/phoneIcon.svg" alt="" />
             <div class="footer__contactData-cont">
               <h4 class="footer__contactData-title">Phone Number</h4>
-              <p class="footer__contactData-text">+987 354 128 76 547</p>
+              <p class="footer__contactData-text">+34 621 065 317</p>
             </div>
           </div>
           <div class="footer__contactData">
             <img src="./public/images/emailIcon.svg" alt="" />
             <div class="footer__contactData-cont">
-              <h4 class="footer__contactData-title">Phone Number</h4>
-              <p class="footer__contactData-text">+987 354 128 76 547</p>
+              <h4 class="footer__contactData-title">Email Address</h4>
+              <p class="footer__contactData-text">
+                agustin.carignano@gmail.com
+              </p>
             </div>
           </div>
           <div class="footer__contactData">
             <img src="./public/images/mappinIcon.svg" alt="" />
             <div class="footer__contactData-cont">
-              <h4 class="footer__contactData-title">Phone Number</h4>
-              <p class="footer__contactData-text">+987 354 128 76 547</p>
+              <h4 class="footer__contactData-title">Office Address</h4>
+              <p class="footer__contactData-text">
+                C. de la Princesa, 31, 2º<br />
+                28008 Madrid
+              </p>
             </div>
           </div>
         </div>
@@ -550,5 +564,6 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="./public/index.js"></script>
+    <script src="./public/responsiveMenu.js"></script>
   </body>
 </html>

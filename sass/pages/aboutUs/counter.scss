@@ -51,7 +51,7 @@
       justify-content: space-around;
       column-gap: 20px;
       align-items: stretch;
-      & > .hidden {
+      & > .imgHidden {
         display: none;
       }
     }
@@ -86,7 +86,7 @@
         max-width: 570px;
       }
       &__imgContainer {
-        & > .hidden {
+        & > .imgHidden {
           display: block;
         }
       }

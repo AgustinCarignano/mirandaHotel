@@ -95,14 +95,18 @@ font-family: 'Roboto', sans-serif; */
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 10;
+  z-index: 100;
   padding: 2.5px 20px;
+}
+.header__navbar__menu {
+  cursor: pointer;
 }
 .header__navbar__menu > div {
   width: 20px;
   height: 1.5px;
   background-color: #111;
-  margin: 4px 20px 4px 0;
+  margin: 5.3px 20px 5.3px 0;
+  transform-origin: left;
 }
 .header__navbar__brand {
   color: #111;
@@ -149,6 +153,7 @@ font-family: 'Roboto', sans-serif; */
 
 .mobileNavbar {
   display: block;
+  z-index: 10;
   position: fixed;
   top: 0;
   left: 0;
@@ -156,14 +161,45 @@ font-family: 'Roboto', sans-serif; */
   background-color: #fff;
   width: 100%;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.29);
-  padding: 30px 20px;
+  padding: 2px 20px;
 }
 .mobileNavbar > li {
   margin: 25px 0;
 }
 
-.hidden {
+.initialHidden {
   display: none;
+}
+
+.hidden {
+  animation: hiddeMenu 0.5s ease-in-out 0s forwards;
+  overflow: hidden;
+}
+
+.visible {
+  display: block;
+  animation: showMenu 0.5s ease-in-out 0s forwards;
+  overflow: hidden;
+}
+
+.open div:first-child {
+  animation: burgerUpOpen 0.5s ease-in-out 0s forwards;
+}
+.open div:nth-child(2) {
+  animation: burgerMidOpen 0.5s ease-in-out 0s forwards;
+}
+.open div:nth-child(3) {
+  animation: burgerDownOpen 0.5s ease-in-out 0s forwards;
+}
+
+.close div:first-child {
+  animation: burgerUpClose 0.5s ease-in-out 0s forwards;
+}
+.close div:nth-child(2) {
+  animation: burgerMidClose 0.5s ease-in-out 0s forwards;
+}
+.close div:nth-child(3) {
+  animation: burgerDownClose 0.5s ease-in-out 0s forwards;
 }
 
 @media (min-width: 1000px) {
@@ -208,6 +244,97 @@ font-family: 'Roboto', sans-serif; */
   }
   .mobileNavbar {
     display: none;
+  }
+}
+@keyframes hiddeMenu {
+  0% {
+    height: 194.6px;
+    opacity: 1;
+  }
+  99% {
+    height: 0px;
+    opacity: 1;
+    z-index: 10;
+  }
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+@keyframes showMenu {
+  0% {
+    height: 0px;
+    opacity: 1;
+  }
+  100% {
+    height: 194.6px;
+  }
+}
+@keyframes burgerUpOpen {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6.5px);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+@keyframes burgerDownOpen {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6.5px);
+  }
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+@keyframes burgerMidOpen {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes burgerUpClose {
+  0% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(0);
+    transform: translateY(6.5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes burgerMidClose {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes burgerDownClose {
+  0% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: translateY(-6.5px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 .footer {
@@ -407,6 +534,7 @@ font-family: 'Roboto', sans-serif; */
   font: normal 400 16px/26px "Roboto", sans-serif;
   line-height: 16.5px;
   border: none;
+  outline: none;
   border-bottom: solid 2px #bead8e;
   background-color: transparent;
   color: #686868;
@@ -607,10 +735,9 @@ font-family: 'Roboto', sans-serif; */
 .rooms__slider__swiper {
   width: 100%;
   max-width: 365px;
-  height: 15rem;
 }
 .rooms__slider__swiper img {
-  height: 100%;
+  width: 100%;
 }
 .rooms__slider__swiper .swiper-button-prev {
   color: #111;
@@ -699,8 +826,6 @@ font-family: 'Roboto', sans-serif; */
     max-width: 750px;
   }
   .rooms__slider__swiper {
-    width: 100%;
-    height: 30rem;
     max-width: 750px;
   }
   .rooms__slider__swiper > img {
@@ -784,6 +909,10 @@ font-family: 'Roboto', sans-serif; */
   display: grid;
   grid-template-columns: 1fr;
 }
+.facilities__slider__container > div {
+  position: relative;
+  padding: 18px;
+}
 .facilities__slider__container > .facilityActive {
   display: block;
 }
@@ -794,7 +923,21 @@ font-family: 'Roboto', sans-serif; */
   margin: 30px auto;
 }
 .facilities__slider__imgs > img {
-  width: 100%;
+  width: 30%;
+  transition: all 0.3s;
+}
+.facilities__slider__imgs > img:hover {
+  transform: scale(1.1);
+  animation: facilityAnimation 0.8s linear infinite;
+}
+.facilities__slider__imgs > span {
+  color: rgba(34, 34, 34, 0.0392156863);
+  font: normal 700 14px/15.2px "Archivo", sans-serif;
+  font-size: 120px;
+  line-height: 130px;
+  position: absolute;
+  top: -18px;
+  right: 0;
 }
 .facilities__slider__title, .pageAboutFacility__slider__title {
   font: normal 400 24px/24px "Old Standard TT", serif;
@@ -837,6 +980,23 @@ font-family: 'Roboto', sans-serif; */
   }
   .facilities__slider__dots, .pageAboutCounter__slider__dots, .pageAboutFacility__slider__dots {
     display: none;
+  }
+}
+@keyframes facilityAnimation {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 .menu {
@@ -1070,7 +1230,7 @@ font-family: 'Roboto', sans-serif; */
     margin: 120px auto;
   }
 }
-/* about us page */
+/* pages */
 .pagesHeader {
   background-image: url("./images/pageHeaderBackground.webp");
   background-size: cover;
@@ -1117,6 +1277,7 @@ font-family: 'Roboto', sans-serif; */
     margin: 24px 0;
   }
 }
+/* about us page */
 .pageAboutPresentation {
   padding: 0 20px;
   text-align: center;
@@ -1147,19 +1308,22 @@ font-family: 'Roboto', sans-serif; */
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 2.4px;
-  width: 70%;
+  width: 100%;
   padding: 39.2px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /* & > .smallImg {
+    margin-top: 6px;
+    padding-bottom: 6px;
+  } */
 }
 .pageAboutPresentation__offers__item > img {
   margin-bottom: 12px;
 }
-.pageAboutPresentation__offers__item > .smallImg {
-  margin-top: 6px;
-  padding-bottom: 6px;
+.pageAboutPresentation__offers > .mobileHidden {
+  display: none;
 }
 .pageAboutPresentation__offers > .active {
   background-color: #bead8e;
@@ -1168,7 +1332,7 @@ font-family: 'Roboto', sans-serif; */
 
 @media (min-width: 1000px) {
   .pageAboutPresentation {
-    max-width: 1170px;
+    max-width: 1210px;
   }
   .pageAboutPresentation__video {
     height: 650px;
@@ -1181,7 +1345,11 @@ font-family: 'Roboto', sans-serif; */
     max-width: 1050px;
   }
   .pageAboutPresentation__offers {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+  }
+  .pageAboutPresentation__offers > .mobileHidden {
+    display: block;
   }
 }
 .pageAboutResto {
@@ -1225,10 +1393,6 @@ font-family: 'Roboto', sans-serif; */
   .pageAboutResto {
     max-width: 1170px;
     margin-bottom: 120px;
-    /* 
-    &__img {
-      height: unset;
-    } */
   }
   .pageAboutResto__container {
     display: flex;
@@ -1285,6 +1449,16 @@ font-family: 'Roboto', sans-serif; */
 .pageAboutFacility__slider__container > .facilityInactive {
   display: none;
 }
+.pageAboutFacility__slider__imgs {
+  margin-bottom: 30px;
+}
+.pageAboutFacility__slider__imgs > img {
+  transition: all 0.3s;
+}
+.pageAboutFacility__slider__imgs > img:hover {
+  transform: scale(1.1);
+  animation: facilityAnimation 0.8s linear infinite;
+}
 .pageAboutFacility__slider__imgs > span {
   color: #222;
   font: normal 700 14px/15.2px "Archivo", sans-serif;
@@ -1326,6 +1500,9 @@ font-family: 'Roboto', sans-serif; */
   }
   .pageAboutFacility__slider__container > .facilityInactive {
     display: block;
+  }
+  .pageAboutFacility__slider__text {
+    margin-bottom: 0;
   }
   .pageAboutFacility__slider__dots {
     display: none;
@@ -1385,7 +1562,7 @@ font-family: 'Roboto', sans-serif; */
   column-gap: 20px;
   align-items: stretch;
 }
-.pageAboutCounter__slider__imgContainer > .hidden {
+.pageAboutCounter__slider__imgContainer > .imgHidden {
   display: none;
 }
 .pageAboutCounter__slider__dots {
@@ -1417,7 +1594,7 @@ font-family: 'Roboto', sans-serif; */
     display: inline-block;
     max-width: 570px;
   }
-  .pageAboutCounter__slider__imgContainer > .hidden {
+  .pageAboutCounter__slider__imgContainer > .imgHidden {
     display: block;
   }
   .pageAboutCounter__slider__dots {
@@ -1483,8 +1660,25 @@ font-family: 'Roboto', sans-serif; */
   color: #bdbdbd;
 }
 .pageRoomsGrid__paginateBar {
-  text-align: center;
-  margin: 25px 0 50px;
+  margin: 25px auto 50px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 280px;
+  color: #222;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: normal;
+  font-family: "Roboto", sans-serif;
+}
+.pageRoomsGrid__paginateBar > span {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+.pageRoomsGrid__paginateBar > .active {
+  background-color: #bead8e;
+  color: #fff;
 }
 
 @media (min-width: 1000px) {
@@ -1520,6 +1714,12 @@ font-family: 'Roboto', sans-serif; */
 }
 .pageRoomsList__price-link {
   color: #bdbdbd;
+  transition: all 0.5s;
+}
+.pageRoomsList__price-link:hover {
+  transform: scale(1.1);
+  color: #fff;
+  background-color: #bead8e;
 }
 .pageRoomsList__price > hr {
   display: none;
@@ -1670,18 +1870,19 @@ font-family: 'Roboto', sans-serif; */
   font-size: 14px;
   line-height: 15.2px;
 }
-.pageDetailsAvailability__form-date {
+.pageDetailsAvailability__form-date, .pageDetailsAvailability__form-text {
   border: none;
+  outline: none;
   background-color: #f8f8f8;
   font: normal 400 26px/28.3px "Archivo", sans-serif;
   font-size: 14px;
   line-height: 15.2px;
   color: #777;
-  padding: 21px 0 21px 30px;
+  padding: 15px 0 15px 30px;
   position: relative;
   max-width: 330px;
 }
-.pageDetailsAvailability__form-date::-webkit-calendar-picker-indicator {
+.pageDetailsAvailability__form-date::-webkit-calendar-picker-indicator, .pageDetailsAvailability__form-text::-webkit-calendar-picker-indicator {
   background-image: url("./images/calendarGreyIcon.svg");
   position: absolute;
   right: 20px;
@@ -1881,9 +2082,11 @@ font-family: 'Roboto', sans-serif; */
   margin-bottom: 32px;
 }
 .pageOffersList__img {
-  width: 100%;
-  height: 162px;
   background-color: #ebebeb;
+}
+.pageOffersList__img-photo {
+  width: 100%;
+  aspect-ratio: 16/9;
 }
 .pageOffersList__subtitle {
   color: #777;
@@ -2034,6 +2237,7 @@ font-family: 'Roboto', sans-serif; */
 }
 .pageOfferPopular__slider {
   background-color: #fff;
+  padding-bottom: 30px;
 }
 .pageOfferPopular__slider > .pageRoomsList__legend {
   margin-bottom: 28px;
@@ -2062,6 +2266,7 @@ font-family: 'Roboto', sans-serif; */
   }
   .pageOfferPopular__largeContainer-item {
     background-color: #fff;
+    padding-bottom: 30px;
   }
   .pageOfferPopular__largeContainer-item > .pageRoomsList__legend {
     margin-bottom: 28px;
@@ -2110,9 +2315,6 @@ font-family: 'Roboto', sans-serif; */
 .pageContactInfo__item > img {
   margin-right: 30px;
 }
-.pageContactInfo__item-container {
-  width: 200px;
-}
 .pageContactInfo__item-title {
   font: normal 400 24px/24px "Old Standard TT", serif;
   font-size: 20px;
@@ -2123,12 +2325,15 @@ font-family: 'Roboto', sans-serif; */
   font: normal 400 16px/26px "Roboto", sans-serif;
   font-size: 14px;
   line-height: 16.5px;
+  min-height: 33px;
 }
 .pageContactInfo__map {
+  margin: 50px auto;
+}
+.pageContactInfo__map > iframe {
+  aspect-ratio: 16/9;
   width: 100%;
-  height: 200px;
-  background-color: #d4d4d4;
-  margin: 50px 0;
+  border: none;
 }
 
 @media (min-width: 1000px) {
@@ -2143,7 +2348,6 @@ font-family: 'Roboto', sans-serif; */
     padding-left: 50px;
   }
   .pageContactInfo__map {
-    height: 700px;
     margin-bottom: 130px;
   }
 }

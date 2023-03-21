@@ -33,6 +33,14 @@
       }
     }
     &__imgs {
+      margin-bottom: 30px;
+      & > img {
+        transition: all 0.3s;
+        &:hover {
+          transform: scale(1.1);
+          animation: facilityAnimation 0.8s linear infinite;
+        }
+      }
       & > span {
         color: #222;
         font: $Archivo-700;
@@ -80,6 +88,9 @@
         & > .facilityInactive {
           display: block;
         }
+      }
+      &__text {
+        margin-bottom: 0;
       }
       &__dots {
         display: none;

@@ -58,8 +58,19 @@
     }
   }
   &__paginateBar {
-    text-align: center;
-    margin: 25px 0 50px;
+    margin: 25px auto 50px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 280px;
+    @include Roboto(#222, 700, 14px, 19px);
+    & > span {
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+    & > .active {
+      background-color: #bead8e;
+      color: #fff;
+    }
   }
 }
 

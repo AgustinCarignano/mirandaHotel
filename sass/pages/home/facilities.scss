@@ -10,9 +10,16 @@
     color: #222;
   }
   &__slider {
+    padding: 0 13px;
+    margin: 0 auto;
+    width: fit-content;
     &__container {
       display: grid;
       grid-template-columns: 1fr;
+      & > div {
+        position: relative;
+        padding: 18px;
+      }
       & > .facilityActive {
         display: block;
       }
@@ -20,13 +27,24 @@
         display: none;
       }
     }
-    padding: 0 13px;
-    margin: 0 auto;
-    width: fit-content;
     &__imgs {
       margin: 30px auto;
       & > img {
-        width: 100%;
+        width: 30%;
+        transition: all 0.3s;
+        &:hover {
+          transform: scale(1.1);
+          animation: facilityAnimation 0.8s linear infinite;
+        }
+      }
+      & > span {
+        color: #2222220a;
+        font: $Archivo-700;
+        font-size: 120px;
+        line-height: 130px;
+        position: absolute;
+        top: -18px;
+        right: 0;
       }
     }
     &__title {
@@ -76,5 +94,23 @@
         display: none;
       }
     }
+  }
+}
+
+@keyframes facilityAnimation {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

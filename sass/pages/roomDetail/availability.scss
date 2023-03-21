@@ -25,12 +25,13 @@
     }
     &-date {
       border: none;
+      outline: none;
       background-color: #f8f8f8;
       font: $Archivo-400;
       font-size: 14px;
       line-height: 15.2px;
       color: #777;
-      padding: 21px 0 21px 30px;
+      padding: 15px 0 15px 30px;
       position: relative;
       max-width: 330px;
       &::-webkit-calendar-picker-indicator {
@@ -41,6 +42,9 @@
         bottom: 50%;
         transform: translateY(-50%);
       }
+    }
+    &-text {
+      @extend .pageDetailsAvailability__form-date;
     }
     &-btn {
       width: 100%;

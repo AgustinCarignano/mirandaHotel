@@ -26,6 +26,7 @@
   &__slider {
     @extend .pageDetailsRelated__slider;
     background-color: #fff;
+    padding-bottom: 30px;
     & > .pageRoomsList__legend {
       margin-bottom: 28px;
     }
@@ -55,6 +56,7 @@
       gap: 30px;
       &-item {
         background-color: #fff;
+        padding-bottom: 30px;
         & > .pageRoomsList__legend {
           margin-bottom: 28px;
         }

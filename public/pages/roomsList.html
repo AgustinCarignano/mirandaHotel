@@ -11,8 +11,8 @@
     <header class="header">
       <div class="header__container">
         <p class="header__welcomeTextDesktop">We Make You Feel Comfortable</p>
-        <nav class="header__navbar">
-          <div class="header__navbar__menu">
+        <nav class="header__navbar" id="navbar">
+          <div class="header__navbar__menu" id="burgerBtn">
             <div></div>
             <div></div>
             <div></div>
@@ -48,7 +48,10 @@
             </figure>
           </div>
         </nav>
-        <ul class="header__navbar__linkList mobileNavbar hidden">
+        <ul
+          class="header__navbar__linkList mobileNavbar initialHidden hidden"
+          id="mobileNavbar"
+        >
           <li class="header__navbar__link">
             <a href="./aboutUs.html">About Us</a>
           </li>
@@ -109,7 +112,9 @@
                 $345<small>/Night</small>
               </p>
               <hr />
-              <a class="pageRoomsList__price-link" href="#">Book now</a>
+              <a class="pageRoomsList__price-link" href="./roomDetails.html"
+                >Book now</a
+              >
             </div>
           </div>
           <div class="pageRoomsList__room">
@@ -139,7 +144,9 @@
                 $345<small>/Night</small>
               </p>
               <hr />
-              <a class="pageRoomsList__price-link" href="#">Book now</a>
+              <a class="pageRoomsList__price-link" href="./roomDetails.html"
+                >Book now</a
+              >
             </div>
           </div>
           <div class="pageRoomsList__room">
@@ -169,7 +176,9 @@
                 $345<small>/Night</small>
               </p>
               <hr />
-              <a class="pageRoomsList__price-link" href="#">Book now</a>
+              <a class="pageRoomsList__price-link" href="./roomDetails.html"
+                >Book now</a
+              >
             </div>
           </div>
           <div class="pageRoomsList__room">
@@ -199,12 +208,20 @@
                 $345<small>/Night</small>
               </p>
               <hr />
-              <a class="pageRoomsList__price-link" href="#">Book now</a>
+              <a class="pageRoomsList__price-link" href="./roomDetails.html"
+                >Book now</a
+              >
             </div>
           </div>
         </div>
-        <div class="pageRoomsList__paginateBar">
-          <p>< &nbsp 1 &nbsp 2 &nbsp 3 &nbsp ... &nbsp 10 &nbsp ></p>
+        <div class="pageRoomsGrid__paginateBar">
+          <span class=""><</span>
+          <span class="">1</span>
+          <span class="active">2</span>
+          <span class="">3</span>
+          <span class="">...</span>
+          <span class="">10</span>
+          <span class="">></span>
         </div>
       </section>
     </main>
@@ -221,11 +238,11 @@
             ad minim veniam, quis nostrud exercitat ion ullamco laboris nisi.
           </p>
           <div class="footer__column1-icons">
-            <img src="./public/images/facebookIcon.svg" alt="" />
-            <img src="./public/images/twitterIcon.svg" alt="" />
-            <img src="./public/images/beIcon.svg" alt="" />
-            <img src="./public/images/linkedinIcon.svg" alt="" />
-            <img src="./public/images/youtubeIcon.svg" alt="" />
+            <img src="../images/facebookIcon.svg" alt="" />
+            <img src="../images/twitterIcon.svg" alt="" />
+            <img src="../images/beIcon.svg" alt="" />
+            <img src="../images/linkedinIcon.svg" alt="" />
+            <img src="../images/youtubeIcon.svg" alt="" />
           </div>
         </div>
         <div class="footer__column2">
@@ -246,24 +263,29 @@
         <div class="footer__column3">
           <h2 class="footer__title">Contact Us.</h2>
           <div class="footer__contactData">
-            <img src="./public/images/phoneIcon.svg" alt="" />
+            <img src="../images/phoneIcon.svg" alt="" />
             <div class="footer__contactData-cont">
               <h4 class="footer__contactData-title">Phone Number</h4>
-              <p class="footer__contactData-text">+987 354 128 76 547</p>
+              <p class="footer__contactData-text">+34 621 065 317</p>
             </div>
           </div>
           <div class="footer__contactData">
-            <img src="./public/images/emailIcon.svg" alt="" />
+            <img src="../images/emailIcon.svg" alt="" />
             <div class="footer__contactData-cont">
-              <h4 class="footer__contactData-title">Phone Number</h4>
-              <p class="footer__contactData-text">+987 354 128 76 547</p>
+              <h4 class="footer__contactData-title">Email Address</h4>
+              <p class="footer__contactData-text">
+                agustin.carignano@gmail.com
+              </p>
             </div>
           </div>
           <div class="footer__contactData">
-            <img src="./public/images/mappinIcon.svg" alt="" />
+            <img src="../images/mappinIcon.svg" alt="" />
             <div class="footer__contactData-cont">
-              <h4 class="footer__contactData-title">Phone Number</h4>
-              <p class="footer__contactData-text">+987 354 128 76 547</p>
+              <h4 class="footer__contactData-title">Office Address</h4>
+              <p class="footer__contactData-text">
+                C. de la Princesa, 31, 2º<br />
+                28008 Madrid
+              </p>
             </div>
           </div>
         </div>
@@ -285,5 +307,6 @@
         </div>
       </div>
     </footer>
+    <script src="../responsiveMenu.js"></script>
   </body>
 </html>

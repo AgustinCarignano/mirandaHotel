@@ -12,7 +12,7 @@
       <div class="header__container">
         <p class="header__welcomeTextDesktop">We Make You Feel Comfortable</p>
         <nav class="header__navbar">
-          <div class="header__navbar__menu">
+          <div class="header__navbar__menu" id="burgerBtn">
             <div></div>
             <div></div>
             <div></div>
@@ -48,7 +48,10 @@
             </figure>
           </div>
         </nav>
-        <ul class="header__navbar__linkList mobileNavbar hidden">
+        <ul
+          class="header__navbar__linkList mobileNavbar initialHidden hidden"
+          id="mobileNavbar"
+        >
           <li class="header__navbar__link">
             <a href="./aboutUs.html">About Us</a>
           </li>
@@ -75,7 +78,7 @@
             <div class="pagesHeader__breadcrumbs">
               <a href="#">Home &nbsp</a>
               |
-              <a class="active" href="#">&nbsp Blog</a>
+              <a class="active" href="#">&nbsp Contact</a>
             </div>
           </div>
         </div>
@@ -83,12 +86,12 @@
       <section class="pageContactInfo">
         <div class="pageContactInfo__container">
           <div class="pageContactInfo__item info1">
-            <img src="../images/emailIcon.svg" alt="" />
+            <img src="../images/mappinIcon.svg" alt="" />
             <div class="pageContactInfo__item-container">
-              <h4 class="pageContactInfo__item-title">Email</h4>
+              <h4 class="pageContactInfo__item-title">Office Address</h4>
               <p class="pageContactInfo__item-text">
-                info@webmail.com <br />
-                jobs.webmail@mail.com
+                C. de la Princesa, 31, 2º<br />
+                28008 Madrid
               </p>
             </div>
           </div>
@@ -96,24 +99,24 @@
             <img src="../images/phoneIcon.svg" alt="" />
             <div class="pageContactInfo__item-container">
               <h4 class="pageContactInfo__item-title">Phone Number</h4>
-              <p class="pageContactInfo__item-text">
-                + 97656 8675 7864 7 <br />
-                + 876 766 8675 765 6
-              </p>
+              <p class="pageContactInfo__item-text">+34 621 065 317</p>
             </div>
           </div>
           <div class="pageContactInfo__item info3">
-            <img src="../images/mappinIcon.svg" alt="" />
+            <img src="../images/emailIcon.svg" alt="" />
             <div class="pageContactInfo__item-container">
-              <h4 class="pageContactInfo__item-title">Hotel Address</h4>
+              <h4 class="pageContactInfo__item-title">Email Address</h4>
               <p class="pageContactInfo__item-text">
-                Hotel Address 19/A, Cirikon City hall Tower <br />
-                New York, NYC
+                agustin.carignano@gmail.com
               </p>
             </div>
           </div>
         </div>
-        <div class="pageContactInfo__map"></div>
+        <div class="pageContactInfo__map">
+          <iframe
+            src="https://www.google.com/maps/d/embed?mid=1xH4wuA2UY12a3L--0Tp4s22bqMKm-Lg&ehbc=2E312F"
+          ></iframe>
+        </div>
       </section>
       <section class="pageContactForm">
         <form class="pageContactForm__form">
@@ -159,7 +162,7 @@
               id="contactMessage"
               cols="30"
               rows="10"
-              placeholder="Enter message"
+              placeholder="Tell us what you need"
             ></textarea>
             <img src="../images/contact/penIcon.svg" alt="" />
           </div>
@@ -180,11 +183,11 @@
             ad minim veniam, quis nostrud exercitat ion ullamco laboris nisi.
           </p>
           <div class="footer__column1-icons">
-            <img src="./public/images/facebookIcon.svg" alt="" />
-            <img src="./public/images/twitterIcon.svg" alt="" />
-            <img src="./public/images/beIcon.svg" alt="" />
-            <img src="./public/images/linkedinIcon.svg" alt="" />
-            <img src="./public/images/youtubeIcon.svg" alt="" />
+            <img src="../images/facebookIcon.svg" alt="" />
+            <img src="../images/twitterIcon.svg" alt="" />
+            <img src="../images/beIcon.svg" alt="" />
+            <img src="../images/linkedinIcon.svg" alt="" />
+            <img src="../images/youtubeIcon.svg" alt="" />
           </div>
         </div>
         <div class="footer__column2">
@@ -205,24 +208,29 @@
         <div class="footer__column3">
           <h2 class="footer__title">Contact Us.</h2>
           <div class="footer__contactData">
-            <img src="./public/images/phoneIcon.svg" alt="" />
+            <img src="../images/phoneIcon.svg" alt="" />
             <div class="footer__contactData-cont">
               <h4 class="footer__contactData-title">Phone Number</h4>
-              <p class="footer__contactData-text">+987 354 128 76 547</p>
+              <p class="footer__contactData-text">+34 621 065 317</p>
             </div>
           </div>
           <div class="footer__contactData">
-            <img src="./public/images/emailIcon.svg" alt="" />
+            <img src="../images/emailIcon.svg" alt="" />
             <div class="footer__contactData-cont">
-              <h4 class="footer__contactData-title">Phone Number</h4>
-              <p class="footer__contactData-text">+987 354 128 76 547</p>
+              <h4 class="footer__contactData-title">Email Address</h4>
+              <p class="footer__contactData-text">
+                agustin.carignano@gmail.com
+              </p>
             </div>
           </div>
           <div class="footer__contactData">
-            <img src="./public/images/mappinIcon.svg" alt="" />
+            <img src="../images/mappinIcon.svg" alt="" />
             <div class="footer__contactData-cont">
-              <h4 class="footer__contactData-title">Phone Number</h4>
-              <p class="footer__contactData-text">+987 354 128 76 547</p>
+              <h4 class="footer__contactData-title">Office Address</h4>
+              <p class="footer__contactData-text">
+                C. de la Princesa, 31, 2º<br />
+                28008 Madrid
+              </p>
             </div>
           </div>
         </div>
@@ -244,5 +252,6 @@
         </div>
       </div>
     </footer>
+    <script src="../responsiveMenu.js"></script>
   </body>
 </html>

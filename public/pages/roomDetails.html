@@ -16,7 +16,7 @@
       <div class="header__container">
         <p class="header__welcomeTextDesktop">We Make You Feel Comfortable</p>
         <nav class="header__navbar">
-          <div class="header__navbar__menu">
+          <div class="header__navbar__menu" id="burgerBtn">
             <div></div>
             <div></div>
             <div></div>
@@ -52,7 +52,10 @@
             </figure>
           </div>
         </nav>
-        <ul class="header__navbar__linkList mobileNavbar hidden">
+        <ul
+          class="header__navbar__linkList mobileNavbar initialHidden hidden"
+          id="mobileNavbar"
+        >
           <li class="header__navbar__link">
             <a href="./aboutUs.html">About Us</a>
           </li>
@@ -115,7 +118,7 @@
                   class="pageDetailsAvailability__form-date"
                   type="date"
                   name="checkIn"
-                  id="checkIn"
+                  id="detailsCheckIn"
                   value="2023-06-14"
                 />
                 <label class="pageDetailsAvailability__form-label" for="checkIn"
@@ -125,9 +128,50 @@
                   class="pageDetailsAvailability__form-date"
                   type="date"
                   name="checkOut"
-                  id="checkOut"
+                  id="detailsCheckOut"
                   value="2023-06-16"
                 />
+                <label class="pageDetailsAvailability__form-label" for="checkIn"
+                  >Full Name</label
+                >
+                <input
+                  class="pageDetailsAvailability__form-text"
+                  type="text"
+                  name="fullName"
+                  id="detailsFullName"
+                  placeholder="Type your name..."
+                />
+                <label class="pageDetailsAvailability__form-label" for="checkIn"
+                  >Email</label
+                >
+                <input
+                  class="pageDetailsAvailability__form-text"
+                  type="email"
+                  name="email"
+                  id="detailsEmail"
+                  placeholder="Type your email..."
+                />
+                <label class="pageDetailsAvailability__form-label" for="checkIn"
+                  >Phone</label
+                >
+                <input
+                  class="pageDetailsAvailability__form-text"
+                  type="text"
+                  name="phone"
+                  id="detailsPhone"
+                  placeholder="Type your phone..."
+                />
+                <label class="pageDetailsAvailability__form-label" for="checkIn"
+                  >Message (Special resquest)</label
+                >
+                <textarea
+                  class="pageDetailsAvailability__form-text"
+                  name="message"
+                  id="detailsMessage"
+                  cols="30"
+                  rows="3"
+                  placeholder="Type your message..."
+                ></textarea>
                 <input
                   class="button button-variant1 pageDetailsAvailability__form-btn"
                   type="submit"
@@ -312,9 +356,9 @@
                 <div class="swiper-slide">
                   <img src="../images/hotelRoom1.webp" alt="" />
                 </div>
-                <div class="swiper-slide">
+                <!-- <div class="swiper-slide">
                   <img src="../images/hotelRoom2.webp" alt="" />
-                </div>
+                </div> -->
                 <div class="swiper-slide">
                   <img src="../images/hotelRoom3.webp" alt="" />
                 </div>
@@ -331,13 +375,13 @@
               <img src="../images/nosmokeIcon.svg" alt="" />
               <img src="../images/carIcon.svg" alt="" />
             </div>
-            <div class="pageRoomsList__legend">
-              <h3 class="pageRoomsList__legend-title">Minimal Duplex Room</h3>
-              <p class="pageRoomsList__legend-text">
+            <div class="pageRoomsGrid__legend">
+              <h3 class="pageRoomsGrid__legend-title">Minimal Duplex Room</h3>
+              <p class="pageRoomsGrid__legend-text">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                 eiusmod tempor.
               </p>
-              <p class="pageRoomsList__legend-price">
+              <p class="pageRoomsGrid__legend-price">
                 $345/Night &nbsp<a href="#">&nbsp Booking Now</a>
               </p>
             </div>
@@ -356,20 +400,20 @@
                 <img src="../images/nosmokeIcon.svg" alt="" />
                 <img src="../images/carIcon.svg" alt="" />
               </div>
-              <div class="pageRoomsList__legend">
-                <h3 class="pageRoomsList__legend-title">Minimal Duplex Room</h3>
-                <p class="pageRoomsList__legend-text">
+              <div class="pageRoomsGrid__legend">
+                <h3 class="pageRoomsGrid__legend-title">Minimal Duplex Room</h3>
+                <p class="pageRoomsGrid__legend-text">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
                   do eiusmod tempor.
                 </p>
-                <p class="pageRoomsList__legend-price">
+                <p class="pageRoomsGrid__legend-price">
                   $345/Night &nbsp<a href="#">&nbsp Booking Now</a>
                 </p>
               </div>
             </div>
             <div class="pageDetailsRelated__largeContainer-item">
               <figure class="pageDetailsRelated__largeContainer__img">
-                <img src="../images/hotelRoom1.webp" alt="" />
+                <img src="../images/hotelRoom3.webp" alt="" />
               </figure>
               <div class="pageDetailsRelated__iconsBar">
                 <img src="../images/bedIcon.svg" alt="" />
@@ -380,13 +424,13 @@
                 <img src="../images/nosmokeIcon.svg" alt="" />
                 <img src="../images/carIcon.svg" alt="" />
               </div>
-              <div class="pageRoomsList__legend">
-                <h3 class="pageRoomsList__legend-title">Minimal Duplex Room</h3>
-                <p class="pageRoomsList__legend-text">
+              <div class="pageRoomsGrid__legend">
+                <h3 class="pageRoomsGrid__legend-title">Minimal Duplex Room</h3>
+                <p class="pageRoomsGrid__legend-text">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
                   do eiusmod tempor.
                 </p>
-                <p class="pageRoomsList__legend-price">
+                <p class="pageRoomsGrid__legend-price">
                   $345/Night &nbsp<a href="#">&nbsp Booking Now</a>
                 </p>
               </div>
@@ -408,11 +452,11 @@
             ad minim veniam, quis nostrud exercitat ion ullamco laboris nisi.
           </p>
           <div class="footer__column1-icons">
-            <img src="./public/images/facebookIcon.svg" alt="" />
-            <img src="./public/images/twitterIcon.svg" alt="" />
-            <img src="./public/images/beIcon.svg" alt="" />
-            <img src="./public/images/linkedinIcon.svg" alt="" />
-            <img src="./public/images/youtubeIcon.svg" alt="" />
+            <img src="../images/facebookIcon.svg" alt="" />
+            <img src="../images/twitterIcon.svg" alt="" />
+            <img src="../images/beIcon.svg" alt="" />
+            <img src="../images/linkedinIcon.svg" alt="" />
+            <img src="../images/youtubeIcon.svg" alt="" />
           </div>
         </div>
         <div class="footer__column2">
@@ -433,24 +477,29 @@
         <div class="footer__column3">
           <h2 class="footer__title">Contact Us.</h2>
           <div class="footer__contactData">
-            <img src="./public/images/phoneIcon.svg" alt="" />
+            <img src="../images/phoneIcon.svg" alt="" />
             <div class="footer__contactData-cont">
               <h4 class="footer__contactData-title">Phone Number</h4>
-              <p class="footer__contactData-text">+987 354 128 76 547</p>
+              <p class="footer__contactData-text">+34 621 065 317</p>
             </div>
           </div>
           <div class="footer__contactData">
-            <img src="./public/images/emailIcon.svg" alt="" />
+            <img src="../images/emailIcon.svg" alt="" />
             <div class="footer__contactData-cont">
-              <h4 class="footer__contactData-title">Phone Number</h4>
-              <p class="footer__contactData-text">+987 354 128 76 547</p>
+              <h4 class="footer__contactData-title">Email Address</h4>
+              <p class="footer__contactData-text">
+                agustin.carignano@gmail.com
+              </p>
             </div>
           </div>
           <div class="footer__contactData">
-            <img src="./public/images/mappinIcon.svg" alt="" />
+            <img src="../images/mappinIcon.svg" alt="" />
             <div class="footer__contactData-cont">
-              <h4 class="footer__contactData-title">Phone Number</h4>
-              <p class="footer__contactData-text">+987 354 128 76 547</p>
+              <h4 class="footer__contactData-title">Office Address</h4>
+              <p class="footer__contactData-text">
+                C. de la Princesa, 31, 2º<br />
+                28008 Madrid
+              </p>
             </div>
           </div>
         </div>
@@ -473,6 +522,7 @@
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="/public/index.js"></script>
+    <script src="../index.js"></script>
+    <script src="../responsiveMenu.js"></script>
   </body>
 </html>
