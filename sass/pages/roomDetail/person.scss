@@ -1,18 +1,23 @@
 .pageDetailsPerson {
   text-align: center;
   max-width: 370px;
+  position: relative;
   //margin: 0 auto;
   &__avatar {
     width: 150px;
-    height: 150px; //quitar al agregar imagen
+    aspect-ratio: 1/1;
     border-radius: 75px;
     background-color: #d5d5d5;
     margin: 100px auto 40px;
     position: relative;
+    overflow: hidden;
+    &-person {
+      width: 100%;
+    }
     &-check {
       position: absolute;
-      top: 0;
-      right: 0;
+      top: 100px;
+      right: 110px;
     }
   }
   &__title {
@@ -44,6 +49,9 @@
     padding: 60px 25px 50px;
     &__avatar {
       margin-top: 0;
+      &-check {
+        top: 60px;
+      }
     }
     &__text {
       width: 100%;

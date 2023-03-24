@@ -26,7 +26,7 @@
     &__swiper {
       width: 100%;
       max-width: 365px;
-      & img {
+      &-img {
         width: 100%;
       }
       & .swiper-button-prev {
@@ -34,6 +34,7 @@
         background-color: #fff;
         width: 32px;
         height: 32px;
+        margin-top: -7rem;
         &::after {
           --swiper-navigation-size: 10px;
         }
@@ -43,6 +44,7 @@
         background-color: #bdac8d;
         width: 32px;
         height: 32px;
+        margin-top: -7rem;
         &::after {
           --swiper-navigation-size: 10px;
         }
@@ -115,11 +117,56 @@
     margin-top: 120px;
     overflow-x: hidden;
     &__slider {
-      max-width: 750px;
+      // max-width: 750px;
+      max-width: unset;
+      &__header {
+        opacity: 0;
+        transition: opacity 0.5s;
+      }
       &__swiper {
         max-width: 750px;
-        & > img {
+        overflow: visible;
+        & > .swiper-wrapper {
+          & > .swiper-slide {
+            transform: scale(0.9);
+          }
+          & > .swiper-slide-active {
+            transform: scale(1);
+          }
+        }
+        &-img {
           width: 100%;
+        }
+        /* & > .swiper-backface-hidden {
+          overflow: visible;
+          & > .swiper-wrapper {
+            & > .swiper-slide {
+              transform: scale(0.9);
+            }
+            & > .swiper-slide-active {
+              transform: scale(1);
+            }
+          }
+        } */
+        & > .swiper-wrapper > .swiper-slide-active > .rooms__slider__foot {
+          opacity: 1;
+        }
+        & > .swiper-wrapper > .swiper-slide-active > .rooms__slider__header {
+          opacity: 1;
+        }
+        & .swiper-button-prev {
+          width: 50px;
+          height: 50px;
+          &::after {
+            --swiper-navigation-size: 15px;
+          }
+        }
+        & .swiper-button-next {
+          width: 50px;
+          height: 50px;
+          &::after {
+            --swiper-navigation-size: 15px;
+          }
         }
       }
       &__foot {
@@ -127,6 +174,8 @@
         text-align: left;
         align-items: center;
         padding: 35px;
+        opacity: 0;
+        transition: opacity 0.5s;
         &-text {
           width: 80%;
           margin-left: 0;
@@ -176,7 +225,7 @@
     }
   }
 
-  .swiper-backface-hidden {
+  /* .swiper-backface-hidden {
     overflow: visible;
     & > .swiper-wrapper {
       & > .swiper-slide {
@@ -186,5 +235,5 @@
         transform: scale(1);
       }
     }
-  }
+  } */
 }

@@ -10,7 +10,7 @@
   &__formContainer {
     width: 100%;
     max-width: 330px;
-    margin: 15px 0 28px;
+    margin: 15px auto 28px;
     padding: 20px;
   }
   &__form {
@@ -34,6 +34,7 @@
       padding: 15px 0 15px 30px;
       position: relative;
       max-width: 330px;
+      cursor: text;
       &::-webkit-calendar-picker-indicator {
         background-image: url("./images/calendarGreyIcon.svg");
         position: absolute;
@@ -41,6 +42,7 @@
         top: 50%;
         bottom: 50%;
         transform: translateY(-50%);
+        cursor: pointer;
       }
     }
     &-text {
@@ -55,5 +57,8 @@
 @media (min-width: 1000px) {
   .pageDetailsAvailability {
     width: 330px;
+    padding: 0;
+    grid-column: 2;
+    grid-row: 1 / 3;
   }
 }

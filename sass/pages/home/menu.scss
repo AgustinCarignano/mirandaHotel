@@ -19,15 +19,33 @@
   }
   &__options {
     width: 100%;
-    &__column-active {
-      display: block;
+    &__swiper-controls {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      display: flex;
+      justify-content: flex-end;
     }
-    &__column-inactive {
-      display: none;
+    & .swiper-button-prev {
+      color: #111;
+      background-color: #fff;
+      width: 32px;
+      height: 32px;
+      &::after {
+        --swiper-navigation-size: 10px;
+      }
+    }
+    & .swiper-button-next {
+      color: #fff;
+      background-color: #bdac8d;
+      width: 32px;
+      height: 32px;
+      &::after {
+        --swiper-navigation-size: 10px;
+      }
     }
     &__container {
       display: flex;
-      justify-content: center;
       gap: 30px;
       align-items: center;
       margin: 16px auto;
@@ -59,16 +77,6 @@
       position: relative;
       & > .menu__options__cont {
         color: #fff;
-      }
-      &::after {
-        content: "";
-        background-image: url("./images/factArrowIcon.svg");
-        background-repeat: no-repeat;
-        background-position: 0 50%;
-        width: 35px;
-        padding: 17px 0;
-        position: absolute;
-        right: 40px;
       }
     }
     &__controls {
@@ -111,34 +119,15 @@
         }
       }
     }
-    &__slider {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      max-width: 335px;
-      margin: 0 auto;
+    &__individualSlider {
       &-img {
         width: 100%;
-        max-width: 335px;
-      }
-      & > .active {
-        display: block;
-      }
-      & > .inactive {
-        display: none;
       }
       &-dots {
         display: flex;
-        margin: 24px auto 0;
-        justify-content: space-between;
-        width: 35px;
-        & > div {
-          background-color: #ededed;
-          width: 7px;
-          height: 7px;
-          border-radius: 7px;
-        }
-        & > .active {
+        justify-content: center;
+        margin-top: 20px;
+        & > span {
           background-color: #bead8e;
         }
       }
@@ -174,6 +163,12 @@
     }
   }
 }
+.swiperFoodMenu {
+  overflow: hidden;
+}
+.swiperMenuOption {
+  overflow: hidden;
+}
 
 @media (min-width: 1000px) {
   .menu {
@@ -188,24 +183,23 @@
       &__container {
         justify-content: flex-start;
       }
+      &-activeOption {
+        &::after {
+          content: "";
+          background-image: url("./images/factArrowIcon.svg");
+          background-repeat: no-repeat;
+          background-position: 0 50%;
+          width: 35px;
+          padding: 17px 0;
+          position: absolute;
+          right: 40px;
+        }
+      }
       &__column-inactive {
         display: block;
       }
       &__cont {
         width: 285px;
-      }
-      &__slider {
-        max-width: 1170px;
-        gap: 30px;
-        &-img {
-          max-width: 370px;
-        }
-        & > .inactive {
-          display: block;
-        }
-        &-dots {
-          display: none;
-        }
       }
       &__controls {
         position: absolute;
@@ -218,6 +212,11 @@
         &-arrow {
           width: 10px;
           height: 10px;
+        }
+      }
+      &__individualSlider {
+        &-dots {
+          display: none;
         }
       }
     }

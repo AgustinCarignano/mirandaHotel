@@ -5,6 +5,16 @@
     max-width: 400px;
     margin: 0 auto;
   }
+  &__selectInput {
+    display: inline-block;
+    margin-bottom: 30px;
+    &__select {
+      @extend .pageRoomsGrid__selectInput__select;
+    }
+    &__option {
+      @extend .pageRoomsGrid__selectInput__option;
+    }
+  }
   &__room {
     padding-bottom: 20px;
     margin-bottom: 25px;
@@ -56,6 +66,9 @@
   .pageRoomsList {
     &__container {
       max-width: 1170px;
+    }
+    &__selectInput {
+      margin-left: calc(100% - 180px);
     }
     &__room {
       grid-template-columns: 2fr 2fr 1fr;

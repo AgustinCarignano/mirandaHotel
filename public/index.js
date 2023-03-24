@@ -14,34 +14,75 @@ const swiper = new Swiper(".swiper", {
     prevEl: ".swiper-button-prev",
   },
 
+  breakpoints: {
+    1000: {
+      enabled: false,
+      slidesPerView: 3,
+      spaceBetween: 30,
+      // watchOverflow: true,
+      // watchSlidesProgress: true,
+      // virtualTranslate: true,
+    },
+  },
+
   // And if we need scrollbar
   /* scrollbar: {
     el: ".swiper-scrollbar",
   }, */
 });
 
-/* const navBtn = document.getElementById("homeBurgerBtn");
-const mobileMenu = document.getElementById("homeMobileNavbar");
-navBtn.onclick = () => {
-  mobileMenu.classList.toggle("hidden");
-  mobileMenu.classList.toggle("visible");
-  navBtn.classList.toggle("open");
-  navBtn.classList.toggle("close");
-}; */
+const swiperAboutFacility = new Swiper(".swiperAboutFacility", {
+  direction: "horizontal",
+  loop: true,
 
-/* class ResponsiveMenu {
-  constructor(pageName) {
-    this.navBtn = document.getElementById(`${pageName}BurgerBtn`);
-    this.mobileMenu = document.getElementById(`${pageName}MobileNavbar`);
-    this.navBtn.onclick = () => {
-      this.mobileMenu.classList.toggle("hidden");
-      this.mobileMenu.classList.toggle("visible");
-      this.navBtn.classList.toggle("open");
-      this.navBtn.classList.toggle("close");
-    };
-  }
-}
+  pagination: {
+    el: ".swiperAboutFacility-pagination",
+  },
 
-const homeMenu = new ResponsiveMenu("home");
-const aboutUsMenu = new ResponsiveMenu("aboutUs");
-console.log(aboutUsMenu.navBtn); */
+  breakpoints: {
+    1000: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      grid: {
+        rows: 2,
+        fill: "row",
+      },
+      enabled: false,
+    },
+  },
+});
+
+const swiperAboutCounter = new Swiper(".pageAboutCounter-swiper", {
+  direction: "horizontal",
+  loop: true,
+
+  pagination: {
+    el: ".pageAboutCounter-swiper-pagination",
+  },
+
+  breakpoints: {
+    1000: {
+      enabled: false,
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+  },
+});
+
+const swiperDetailRelated = new Swiper(".swiperPageDetail", {
+  direction: "horizontal",
+  loop: true,
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  breakpoints: {
+    1000: {
+      enabled: false,
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+  },
+});

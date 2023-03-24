@@ -33,8 +33,8 @@
         width: 30%;
         transition: all 0.3s;
         &:hover {
-          transform: scale(1.1);
-          animation: facilityAnimation 0.8s linear infinite;
+          //transform: scale(0.9);
+          animation: facilityAnimation 1.2s linear;
         }
       }
       & > span {
@@ -64,10 +64,15 @@
     }
     &__dots {
       display: flex;
+      justify-content: center;
+      & > span {
+        background-color: #bead8e;
+      }
+      /* display: flex;
       margin: 0 auto;
       justify-content: space-between;
-      width: 77px;
-      & > div {
+      width: 30px; */
+      /* & > div {
         background-color: #ededed;
         width: 7px;
         height: 7px;
@@ -75,12 +80,20 @@
       }
       & > .active {
         background-color: #bead8e;
-      }
+      } */
     }
   }
 }
+.swiperFacility {
+  max-width: 270px;
+  overflow: hidden;
+  margin: 0 auto;
+}
 
 @media (min-width: 1000px) {
+  .swiperFacility {
+    max-width: 1070px;
+  }
   .facilities {
     &__slider {
       &__container {
@@ -99,18 +112,12 @@
 
 @keyframes facilityAnimation {
   0% {
-    transform: rotate(0);
-  }
-  25% {
-    transform: rotate(90deg);
+    transform: scale(1) rotate(0);
   }
   50% {
-    transform: rotate(180deg);
-  }
-  75% {
-    transform: rotate(270deg);
+    transform: scale(0.5) rotate(560deg);
   }
   100% {
-    transform: rotate(360deg);
+    transform: scale(1) rotate(1080deg);
   }
 }

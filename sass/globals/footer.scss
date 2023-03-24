@@ -18,6 +18,19 @@
       display: flex;
       justify-content: space-between;
       max-width: 240px;
+      & > svg {
+        cursor: pointer;
+        &:hover {
+          & > rect {
+            transition: fill 0.3s;
+            fill: #bead8e;
+          }
+          & > path {
+            transition: fill 0.3s;
+            fill: #fff;
+          }
+        }
+      }
     }
   }
   &__brand {
@@ -40,7 +53,6 @@
     }
   }
   &__title {
-    //font: $OldStandard-400;
     @include OldStandard(#111, 400, 24px, 24px);
     margin-bottom: 30px;
   }

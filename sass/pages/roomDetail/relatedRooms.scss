@@ -1,7 +1,8 @@
 .pageDetailsRelated {
   padding: 20px;
   margin: 60px 0;
-  //max-width: 500px;
+  width: 100%;
+  max-width: 540px;
   &__title {
     @extend .pagesSecundaryTitle;
   }
@@ -11,37 +12,57 @@
     margin: 13px 0 35px;
   }
   &__slider {
+    width: 100%;
     max-width: 365px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    &-slide {
+      background-color: #fff;
+    }
+    &-img {
+      width: 100%;
+    }
+    &__swiper {
+      & .swiper-button-prev {
+        color: #111;
+        background-color: #fff;
+        width: 32px;
+        height: 32px;
+        margin-top: -7rem;
+        &::after {
+          --swiper-navigation-size: 10px;
+        }
+      }
+      & .swiper-button-next {
+        color: #fff;
+        background-color: #bdac8d;
+        width: 32px;
+        height: 32px;
+        margin-top: -7rem;
+        &::after {
+          --swiper-navigation-size: 10px;
+        }
+      }
+    }
+    &__legend {
+      padding-bottom: 30px;
+    }
   }
+
   &__iconsBar {
     @extend .pageRoomsGrid__iconsBar;
   }
-  &__largeContainer {
+  /* &__largeContainer {
     display: none;
-  }
+  } */
 }
 
 @media (min-width: 1000px) {
   .pageDetailsRelated {
+    max-width: 770px;
     &__slider {
-      display: none;
-    }
-    &__largeContainer {
-      display: flex;
-      gap: 30px;
-      &-item {
-        background-color: #fff;
-        max-width: 370px;
-        & > .pageRoomsList__legend {
-          margin-bottom: 28px;
-        }
-      }
-      &__img {
-        width: 100%;
-        & > img {
-          width: 100%;
-        }
-      }
+      max-width: unset;
     }
   }
 }

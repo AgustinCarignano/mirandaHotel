@@ -1,11 +1,10 @@
 .button {
-  font: $Archivo-700;
+  @include Archivo(#fff, 700, 14px, 15.2px, 2.8px);
   width: 250px;
   padding: 23px 0;
   border: none;
   margin: 12px 0;
-  color: #fff;
-  letter-spacing: 2.8px;
+  transition: background 0.3s;
   cursor: pointer;
   &-variant1 {
     background-color: #bead8e;

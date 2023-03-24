@@ -10,35 +10,25 @@
     margin-bottom: 32px;
     text-align: center;
   }
+  &__item {
+    position: relative;
+    background-color: #292929;
+    padding: 18px;
+    width: 100%;
+    max-width: 285px;
+    margin: 0 auto;
+  }
   &__slider {
     max-width: 375px;
     margin: 0 auto;
-    &__container {
-      width: 100%;
-      margin: 0 auto 24px;
-      display: flex;
-      flex-wrap: wrap;
-      row-gap: 30px;
-      justify-content: space-around;
-      & > div {
-        position: relative;
-        background-color: #292929;
-        padding: 18px;
-      }
-      & > .facilityActive {
-        display: block;
-      }
-      & > .facilityInactive {
-        display: none;
-      }
-    }
+    overflow: hidden;
     &__imgs {
       margin-bottom: 30px;
       & > img {
         transition: all 0.3s;
         &:hover {
           transform: scale(1.1);
-          animation: facilityAnimation 0.8s linear infinite;
+          animation: facilityAnimation 1.2s linear;
         }
       }
       & > span {
@@ -51,6 +41,14 @@
         right: 0;
       }
     }
+    &__dots {
+      display: flex;
+      justify-content: center;
+      margin-top: 24px;
+      & > span {
+        background-color: #bead8e;
+      }
+    }
     &__title {
       @extend .facilities__slider__title;
       color: #fff;
@@ -59,39 +57,18 @@
       @extend .facilities__slider__text;
       color: #fff;
     }
-    &__dots {
-      @extend .facilities__slider__dots;
-      & > div {
-        background-color: #333;
-        width: 7px;
-        height: 7px;
-        border-radius: 7px;
-      }
-      & > .active {
-        background-color: #bead8e;
-      }
-    }
   }
 }
 
 @media (min-width: 1000px) {
   .pageAboutFacility {
     padding: 100px 20px;
-    &__slider {
+    &__item {
       max-width: unset;
-      &__container {
-        max-width: 1170px;
-        & > div {
-          padding: 60px;
-          max-width: 360px;
-        }
-        & > .facilityInactive {
-          display: block;
-        }
-      }
-      &__text {
-        margin-bottom: 0;
-      }
+      padding: 40px 15%;
+    }
+    &__slider {
+      max-width: 1070px;
       &__dots {
         display: none;
       }

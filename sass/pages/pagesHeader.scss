@@ -32,6 +32,9 @@
     & > .active {
       color: #bead8e;
     }
+    & > .hiddeBreadcrumb {
+      display: none;
+    }
   }
 }
 

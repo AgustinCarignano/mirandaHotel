@@ -15,13 +15,22 @@ navBtn.onclick = () => {
   }
 };
 
-/* const navbar = document.getElementById("navbar");
-const disparador = document.getElementById("disparador");
+const navbar = document.getElementById("navbar");
+
+window.addEventListener("scroll", (e) => {
+  if (window.scrollY > 200) {
+    navbar.classList.remove("topPageBehavior");
+    navbar.classList.add("slideUpMenu");
+  } else {
+    navbar.classList.add("topPageBehavior");
+    navbar.classList.remove("slideUpMenu");
+  }
+});
+
 document.addEventListener("mouseover", (e) => {
-  if (e.y < 130 && window.scrollY > 450) {
-    navbar.classList.add("scrollNavbar");
+  if (e.y < 100 && window.scrollY > 200) {
+    navbar.classList.remove("slideUpMenu");
+  } else if (e.y > 100 && window.scrollY > 200) {
+    navbar.classList.add("slideUpMenu");
   }
-  if (e.y > 130 && navbar.classList.contains("scrollNavbar")) {
-    navbar.classList.remove("scrollNavbar");
-  }
-}); */
+});

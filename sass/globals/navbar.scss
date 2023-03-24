@@ -132,13 +132,20 @@
 
 @media (min-width: 1000px) {
   .header {
+    padding-bottom: 60px;
     &__welcomeTextDesktop {
       display: block;
     }
     &__navbar {
       margin-bottom: -60px;
-      position: relative;
+      //position: relative;
+      top: 0px;
+      left: 0px;
+      right: 0;
+      margin: 0 auto;
       padding: 20px;
+      max-width: 1420px;
+      transition: transform 0.5s;
       &__menu {
         display: none;
       }
@@ -169,6 +176,12 @@
         }
       }
     }
+  }
+  .topPageBehavior {
+    transform: translateY(38.75px);
+  }
+  .slideUpMenu {
+    transform: translateY(-125px);
   }
   .desktopNavbar {
     display: flex;
