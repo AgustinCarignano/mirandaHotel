@@ -1,5 +1,9 @@
-const navBtn = document.getElementById("burgerBtn");
-const mobileMenu = document.getElementById("mobileNavbar");
+//Comportamiento del menu en vista mobile y desktop -----------------------------------------------
+const navBtn = document.getElementById("burgerBtn"); //Boton que muestra u oculta en menu en vista mobile
+const mobileMenu = document.getElementById("mobileNavbar"); // Menu de opciones de la vista moble
+const navbar = document.getElementById("navbar"); // Contenedor que se oculta al bajar la pagina y se muestra al hacer mouseover
+
+//Funcion de mostrar u ocualtar el menu eln vista mobile --------------------------
 navBtn.onclick = () => {
   if (mobileMenu.classList.contains("initialHidden")) {
     mobileMenu.classList.remove("initialHidden");
@@ -15,8 +19,7 @@ navBtn.onclick = () => {
   }
 };
 
-const navbar = document.getElementById("navbar");
-
+//Funcion que oculta el menu al hacer scroll down en la vista desktop
 window.addEventListener("scroll", (e) => {
   if (window.scrollY > 200) {
     navbar.classList.remove("topPageBehavior");
@@ -27,6 +30,7 @@ window.addEventListener("scroll", (e) => {
   }
 });
 
+//Funcionalidad de mostrar el menu al pasar el mouse por la parte superior de la pantalla
 document.addEventListener("mouseover", (e) => {
   if (e.y < 100 && window.scrollY > 200) {
     navbar.classList.remove("slideUpMenu");

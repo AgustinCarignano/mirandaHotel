@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./public/styles.css" />
     <title>Hotel Miranda</title>
   </head>
-  <body>
+  <body id="homePage">
     <header class="header">
       <div class="header__container">
         <p class="header__welcomeTextDesktop">We Make You Feel Comfortable</p>
@@ -181,15 +181,6 @@
         <h4 class="homeSubtitle rooms__subtitle">ROOMS</h4>
         <h2 class="homeTitle rooms__title">Hand Picked Rooms</h2>
         <div class="rooms__slider">
-          <!-- <div class="rooms__slider__header">
-            <img src="./public/images/bedIcon.svg" alt="" />
-            <img src="./public/images/wifiIcon.svg" alt="" />
-            <img src="./public/images/carIcon.svg" alt="" />
-            <img src="./public/images/snowIcon.svg" alt="" />
-            <img src="./public/images/barbellIcon.svg" alt="" />
-            <img src="./public/images/nosmokeIcon.svg" alt="" />
-            <img src="./public/images/carIcon.svg" alt="" />
-          </div> -->
           <div class="swiper rooms__slider__swiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
@@ -376,18 +367,8 @@
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
           </div>
-          <div class="rooms__slider__controlPrev"><div></div></div>
-          <div class="rooms__slider__controlNext"><div></div></div>
-          <!-- <div class="rooms__slider__foot">
-            <div>
-              <h3 class="rooms__slider__foot-title">Minimal Duplex Room</h3>
-              <p class="rooms__slider__foot-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore.
-              </p>
-            </div>
-            <p class="rooms__slider__foot-price">$345<small>/Night</small></p>
-          </div> -->
+          <!-- <div class="rooms__slider__controlPrev"><div></div></div>
+          <div class="rooms__slider__controlNext"><div></div></div> -->
         </div>
         <div class="rooms__video">
           <div class="rooms__video__container">
@@ -503,84 +484,6 @@
           </div>
           <div class="swiperFacility-pagination facilities__slider__dots"></div>
         </div>
-        <!-- <div class="facilities__slider">
-          <div class="facilities__slider__container">
-            <div class="facilityActive">
-              <figure class="facilities__slider__imgs">
-                <img src="./public/images/facilities1.svg" alt="" />
-                <span>01</span>
-              </figure>
-              <h3 class="facilities__slider__title">Have High Rating</h3>
-              <p class="facilities__slider__text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna..
-              </p>
-            </div>
-            <div class="facilityInactive">
-              <figure class="facilities__slider__imgs">
-                <img src="./public/images/facilities2.svg" alt="" />
-                <span>02</span>
-              </figure>
-              <h3 class="facilities__slider__title">Quiet Hours</h3>
-              <p class="facilities__slider__text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna..
-              </p>
-            </div>
-            <div class="facilityInactive">
-              <figure class="facilities__slider__imgs">
-                <img src="./public/images/facilities3.svg" alt="" />
-                <span>03</span>
-              </figure>
-              <h3 class="facilities__slider__title">Best Locations</h3>
-              <p class="facilities__slider__text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna..
-              </p>
-            </div>
-            <div class="facilityInactive">
-              <figure class="facilities__slider__imgs">
-                <img src="./public/images/facilities4.svg" alt="" />
-                <span>04</span>
-              </figure>
-              <h3 class="facilities__slider__title">Free Cancellation</h3>
-              <p class="facilities__slider__text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna..
-              </p>
-            </div>
-            <div class="facilityInactive">
-              <figure class="facilities__slider__imgs">
-                <img src="./public/images/facilities5.svg" alt="" />
-                <span>05</span>
-              </figure>
-              <h3 class="facilities__slider__title">Payment Options</h3>
-              <p class="facilities__slider__text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna..
-              </p>
-            </div>
-            <div class="facilityInactive">
-              <figure class="facilities__slider__imgs">
-                <img src="./public/images/facilities6.svg" alt="" />
-                <span>06</span>
-              </figure>
-              <h3 class="facilities__slider__title">Special Offers</h3>
-              <p class="facilities__slider__text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna..
-              </p>
-            </div>
-          </div>
-          <div class=".swiperFacility-pagination facilities__slider__dots">
-            <div class="active"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class=""></div>
-          </div>
-        </div> -->
       </section>
       <section class="menu">
         <div class="menu__container">
@@ -591,7 +494,7 @@
               <div class="swiper-slide">
                 <div class="menu__options__column">
                   <div
-                    class="menu__options__container"
+                    class="menu__options__container menu__options-activeOption"
                     id="menuOption1"
                     data-path="eggsBacon"
                   >
@@ -668,7 +571,7 @@
                     </div>
                   </div>
                   <div
-                    class="menu__options__container menu__options-activeOption"
+                    class="menu__options__container"
                     id="menuOption5"
                     data-path="marmalade"
                   >
@@ -894,9 +797,7 @@
           </div>
 
           <div class="swiperMenuOption menu__options__individualSlider">
-            <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
-              <!-- Slides -->
               <div class="swiper-slide">
                 <img
                   class="menu__options__individualSlider-img"
@@ -993,7 +894,7 @@
             <svg
               width="40"
               height="40"
-              viewBox="F0 0 40 40"
+              viewBox="0 0 40 40"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -1111,8 +1012,8 @@
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <!-- <script src="./public/index.js"></script> -->
-    <script src="./public/homeSwipers.js"></script>
-    <script src="./public/responsiveMenu.js"></script>
+    <script src="./public/index.js"></script>
+    <script src="./public/menuBehaviour.js"></script>
+    <!-- <script src="./public/homeSwipers.js"></script> -->
   </body>
 </html>
