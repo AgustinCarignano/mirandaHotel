@@ -200,3 +200,14 @@ if (document.body.id === "homePage") {
     });
   };
 }
+
+function createDefaultSlides() {
+  const defaultSlides = [
+    `<div class="swiper-slide"><img class="menu__options__individualSlider-img" src="./public/images/foodsMenu/eggsBacon1.webp" alt="" /></div>`,
+    `<div class="swiper-slide"><img class="menu__options__individualSlider-img" src="./public/images/foodsMenu/eggsBacon2.webp" alt="" /></div>`,
+    `<div class="swiper-slide"><img class="menu__options__individualSlider-img" src="./public/images/foodsMenu/eggsBacon3.webp" alt="" /></div>`,
+  ];
+  swiperMenuOptions.removeAllSlides();
+  swiperMenuOptions.appendSlide(defaultSlides);
+}
+createDefaultSlides();
