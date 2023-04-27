@@ -1,3 +1,5 @@
+import Swiper from "swiper";
+
 const swiper = new Swiper(".swiper", {
   direction: "horizontal",
   loop: true,
@@ -169,14 +171,14 @@ const swiperMenuOptions = new Swiper(".swiperMenuOption", {
 //Funcionalidad para cambiar las imagenes que se muestran en el slider de la seccion menu
 if (document.body.id === "homePage") {
   //array de elementos del DOM - Opciones de menu -------------------------------------------------
-  const foodOptions = [];
+  const foodOptions: (HTMLElement | null)[] = [];
   for (let i = 1; i < 16; i++) {
     foodOptions.push(document.getElementById(`menuOption${i}`));
   }
 
   //Asignacion de evento "click" a cada elemento del array ---------------------------------------
   foodOptions.forEach((el) => {
-    el.onclick = () => {
+    el?.addEventListener("click", () => {
       const { path } = el.dataset;
       const newSlides = [
         `<div class="swiper-slide"><img class="menu__options__individualSlider-img" src="./public/images/foodsMenu/${path}1.webp" alt="" /></div>`,
@@ -186,16 +188,16 @@ if (document.body.id === "homePage") {
       showSelectedMenu(el.id);
       swiperMenuOptions.removeAllSlides();
       swiperMenuOptions.appendSlide(newSlides);
-    };
+    });
   });
 
   //Funcion para agregar la clase "active" al elemento clickeado y restaurar las anteriores
-  const showSelectedMenu = (id) => {
+  const showSelectedMenu = (id: string) => {
     foodOptions.forEach((el) => {
-      if (el.id === id) {
-        el.classList.add("menu__options-activeOption");
+      if (el?.id === id) {
+        el?.classList.add("menu__options-activeOption");
       } else {
-        el.classList.remove("menu__options-activeOption");
+        el?.classList.remove("menu__options-activeOption");
       }
     });
   };
