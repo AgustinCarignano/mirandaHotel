@@ -2000,6 +2000,47 @@ font-family: 'Roboto', sans-serif; */
 .pageDetailsAvailability__form-btn {
   width: 100%;
 }
+.pageDetailsAvailability__modalContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(119, 119, 119, 0.8039215686);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pageDetailsAvailability__modalContainer-hidden {
+  display: none;
+}
+.pageDetailsAvailability__modal {
+  background-color: #f8f8f8;
+  padding: 50px 60px 10px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pageDetailsAvailability__modal__title {
+  font: normal 700 14px/15.2px "Archivo", sans-serif;
+  font-size: 24px;
+  letter-spacing: -0.54px;
+  color: #222;
+  text-align: center;
+}
+.pageDetailsAvailability__modal__text {
+  font: normal 400 26px/28.3px "Archivo", sans-serif;
+  font-size: 18px;
+  color: #777;
+  text-align: center;
+  margin: 30px 0;
+}
+.pageDetailsAvailability__modal__btn {
+  padding: 15px;
+  width: 60%;
+}
 
 @media (min-width: 1000px) {
   .pageDetailsAvailability {
