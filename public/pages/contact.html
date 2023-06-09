@@ -119,7 +119,7 @@
         </div>
       </section>
       <section class="pageContactForm">
-        <form class="pageContactForm__form">
+        <form class="pageContactForm__form" id="contactForm">
           <div class="pageContactForm__form__item">
             <input
               type="text"
@@ -168,6 +168,27 @@
           </div>
           <input class="button button-variant1" type="submit" value="SEND" />
         </form>
+        <div
+          class="pageDetailsAvailability__modalContainer pageDetailsAvailability__modalContainer-hidden"
+          id="contactModal"
+        >
+          <div class="pageDetailsAvailability__modal">
+            <h2 class="pageDetailsAvailability__modal__title">
+              ¡Thank you for contact us!
+            </h2>
+            <p class="pageDetailsAvailability__modal__text">
+              We have received it correctly. <br />
+              Someone from our Team will get <br />
+              back to you very soon.
+            </p>
+            <button
+              class="button button-variant1 pageDetailsAvailability__modal__btn"
+              id="contactBtn"
+            >
+              ACEPT
+            </button>
+          </div>
+        </div>
       </section>
     </main>
     <footer class="footer">
@@ -319,5 +340,6 @@
       </div>
     </footer>
     <script src="../JS/menuBehaviour.js"></script>
+    <script src="../JS/contact.js"></script>
   </body>
 </html>
