@@ -123,10 +123,7 @@
           <section class="pageDetailsAvailability">
             <h3 class="pageDetailsAvailability__title">Check Availability</h3>
             <div class="pageDetailsAvailability__formContainer">
-              <form
-                action="./fakeCheckIn.html"
-                class="pageDetailsAvailability__form"
-              >
+              <form class="pageDetailsAvailability__form" id="availabilityForm">
                 <label class="pageDetailsAvailability__form-label" for="checkIn"
                   >Check In</label
                 >
@@ -194,6 +191,27 @@
                   value="CHECK AVAILABILITY"
                 />
               </form>
+              <div
+                class="pageDetailsAvailability__modalContainer pageDetailsAvailability__modalContainer-hidden"
+                id="availabilityModal"
+              >
+                <div class="pageDetailsAvailability__modal">
+                  <h2 class="pageDetailsAvailability__modal__title">
+                    ¡Thank you for your request!
+                  </h2>
+                  <p class="pageDetailsAvailability__modal__text">
+                    We have received it correctly. <br />
+                    Someone from our Team will get <br />
+                    back to you very soon.
+                  </p>
+                  <button
+                    class="button button-variant1 pageDetailsAvailability__modal__btn"
+                    id="modalBtn"
+                  >
+                    ACEPT
+                  </button>
+                </div>
+              </div>
             </div>
           </section>
           <section class="pageDetailsDescription">
@@ -684,7 +702,8 @@
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="../index.js"></script>
-    <script src="../menuBehaviour.js"></script>
+    <script src="../JS/index.js"></script>
+    <script src="../JS/menuBehaviour.js"></script>
+    <script src="../JS/booking.js"></script>
   </body>
 </html>

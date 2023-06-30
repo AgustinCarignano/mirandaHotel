@@ -4,6 +4,7 @@ html,
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -830,6 +831,9 @@ font-family: 'Roboto', sans-serif; */
   max-width: 500px;
   margin: 0 auto;
 }
+.rooms__video__container > a {
+  width: fit-content;
+}
 .rooms__video__subtitle {
   margin: 44px 0 32px;
   color: #bdac8d;
@@ -864,17 +868,6 @@ font-family: 'Roboto', sans-serif; */
   .rooms__slider__swiper {
     max-width: 750px;
     overflow: visible;
-    /* & > .swiper-backface-hidden {
-      overflow: visible;
-      & > .swiper-wrapper {
-        & > .swiper-slide {
-          transform: scale(0.9);
-        }
-        & > .swiper-slide-active {
-          transform: scale(1);
-        }
-      }
-    } */
   }
   .rooms__slider__swiper > .swiper-wrapper > .swiper-slide {
     transform: scale(0.9);
@@ -957,17 +950,6 @@ font-family: 'Roboto', sans-serif; */
     z-index: 1;
     margin: 0;
   }
-  /* .swiper-backface-hidden {
-    overflow: visible;
-    & > .swiper-wrapper {
-      & > .swiper-slide {
-        transform: scale(0.9);
-      }
-      & > .swiper-slide-active {
-        transform: scale(1);
-      }
-    }
-  } */
 }
 .facilities {
   padding: 0 25px;
@@ -1999,6 +1981,47 @@ font-family: 'Roboto', sans-serif; */
 }
 .pageDetailsAvailability__form-btn {
   width: 100%;
+}
+.pageDetailsAvailability__modalContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(119, 119, 119, 0.8039215686);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pageDetailsAvailability__modalContainer-hidden {
+  display: none;
+}
+.pageDetailsAvailability__modal {
+  background-color: #f8f8f8;
+  padding: 50px 60px 10px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pageDetailsAvailability__modal__title {
+  font: normal 700 14px/15.2px "Archivo", sans-serif;
+  font-size: 24px;
+  letter-spacing: -0.54px;
+  color: #222;
+  text-align: center;
+}
+.pageDetailsAvailability__modal__text {
+  font: normal 400 26px/28.3px "Archivo", sans-serif;
+  font-size: 18px;
+  color: #777;
+  text-align: center;
+  margin: 30px 0;
+}
+.pageDetailsAvailability__modal__btn {
+  padding: 15px;
+  width: 60%;
 }
 
 @media (min-width: 1000px) {

@@ -90,6 +90,9 @@
     &__container {
       max-width: 500px;
       margin: 0 auto;
+      & > a {
+        width: fit-content;
+      }
     }
     &__subtitle {
       margin: 44px 0 32px;
@@ -137,17 +140,6 @@
         &-img {
           width: 100%;
         }
-        /* & > .swiper-backface-hidden {
-          overflow: visible;
-          & > .swiper-wrapper {
-            & > .swiper-slide {
-              transform: scale(0.9);
-            }
-            & > .swiper-slide-active {
-              transform: scale(1);
-            }
-          }
-        } */
         & > .swiper-wrapper > .swiper-slide-active > .rooms__slider__foot {
           opacity: 1;
         }
@@ -227,16 +219,4 @@
       }
     }
   }
-
-  /* .swiper-backface-hidden {
-    overflow: visible;
-    & > .swiper-wrapper {
-      & > .swiper-slide {
-        transform: scale(0.9);
-      }
-      & > .swiper-slide-active {
-        transform: scale(1);
-      }
-    }
-  } */
 }
