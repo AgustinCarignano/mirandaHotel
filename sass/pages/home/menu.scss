@@ -89,6 +89,10 @@
         padding: 18px;
         position: relative;
         cursor: pointer;
+        transition: all 0.2s;
+        &:active {
+          transform: scale(0.9);
+        }
       }
       &-arrow {
         width: 6.8px;

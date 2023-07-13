@@ -776,6 +776,10 @@ font-family: 'Roboto', sans-serif; */
   width: 32px;
   height: 32px;
   margin-top: -7rem;
+  transition: all 0.2s;
+}
+.rooms__slider__swiper .swiper-button-prev:active {
+  transform: scale(0.9);
 }
 .rooms__slider__swiper .swiper-button-prev::after {
   --swiper-navigation-size: 10px;
@@ -786,6 +790,10 @@ font-family: 'Roboto', sans-serif; */
   width: 32px;
   height: 32px;
   margin-top: -7rem;
+  transition: all 0.2s;
+}
+.rooms__slider__swiper .swiper-button-next:active {
+  transform: scale(0.9);
 }
 .rooms__slider__swiper .swiper-button-next::after {
   --swiper-navigation-size: 10px;
@@ -1163,6 +1171,10 @@ font-family: 'Roboto', sans-serif; */
   padding: 18px;
   position: relative;
   cursor: pointer;
+  transition: all 0.2s;
+}
+.menu__options__controls-container:active {
+  transform: scale(0.9);
 }
 .menu__options__controls-arrow {
   width: 6.8px;
@@ -2414,6 +2426,10 @@ font-family: 'Roboto', sans-serif; */
   width: 32px;
   height: 32px;
   margin-top: -7rem;
+  transition: all 0.2s;
+}
+.pageOfferPopular__slider__swiper .swiper-button-prev:active {
+  transform: scale(0.9);
 }
 .pageOfferPopular__slider__swiper .swiper-button-prev::after {
   --swiper-navigation-size: 10px;
@@ -2424,6 +2440,10 @@ font-family: 'Roboto', sans-serif; */
   width: 32px;
   height: 32px;
   margin-top: -7rem;
+  transition: all 0.2s;
+}
+.pageOfferPopular__slider__swiper .swiper-button-next:active {
+  transform: scale(0.9);
 }
 .pageOfferPopular__slider__swiper .swiper-button-next::after {
   --swiper-navigation-size: 10px;

@@ -35,6 +35,10 @@
         width: 32px;
         height: 32px;
         margin-top: -7rem;
+        transition: all 0.2s;
+        &:active {
+          transform: scale(0.9);
+        }
         &::after {
           --swiper-navigation-size: 10px;
         }
@@ -45,6 +49,10 @@
         width: 32px;
         height: 32px;
         margin-top: -7rem;
+        transition: all 0.2s;
+        &:active {
+          transform: scale(0.9);
+        }
         &::after {
           --swiper-navigation-size: 10px;
         }
