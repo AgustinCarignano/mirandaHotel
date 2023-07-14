@@ -12,6 +12,17 @@
     max-width: 330px;
     margin: 15px auto 28px;
     padding: 20px;
+    position: relative;
+  }
+  &__formErrorMessage {
+    display: none;
+    color: red;
+    font: $Archivo-400;
+    font-size: 14px;
+    line-height: 15.2px;
+    position: absolute;
+    right: 20px;
+    top: 18px;
   }
   &__form {
     display: flex;
@@ -69,7 +80,8 @@
   }
   &__modal {
     background-color: #f8f8f8;
-    padding: 50px 60px 10px;
+    max-width: 90%;
+    padding: 40px 30px 10px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -77,6 +89,7 @@
     &__title {
       font: $Archivo-700;
       font-size: 24px;
+      line-height: 25px;
       letter-spacing: -0.54px;
       color: #222;
       text-align: center;
@@ -93,6 +106,10 @@
       width: 60%;
     }
   }
+}
+
+.show {
+  display: inline-block;
 }
 
 @media (min-width: 1000px) {
