@@ -26,9 +26,9 @@ function checkInputs(arr: NodeListOf<HTMLInputElement>) {
   let isValid = true;
   arr.forEach((input) => {
     if (!input.value) {
-      input.style.border = "solid 1px red";
+      input.style.outline = "solid 1px red";
       input.addEventListener("focus", () => {
-        input.style.border = "none";
+        input.style.outline = "none";
       });
       isValid = false;
     }
