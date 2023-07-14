@@ -1959,7 +1959,7 @@ font-family: 'Roboto', sans-serif; */
   padding: 20px;
   position: relative;
 }
-.pageDetailsAvailability__formErrorMessage {
+.pageDetailsAvailability__formErrorMessage, .pageContactForm__form__formErrorMessage {
   display: none;
   color: red;
   font: normal 400 26px/28.3px "Archivo", sans-serif;
@@ -2563,12 +2563,17 @@ font-family: 'Roboto', sans-serif; */
 }
 .pageContactForm__form {
   display: grid;
+  position: relative;
   grid-template-columns: 1fr;
   gap: 16px;
   justify-content: space-between;
   justify-items: center;
   max-width: 375px;
   margin: 0 auto;
+}
+.pageContactForm__form__formErrorMessage {
+  top: -20px;
+  left: 0px;
 }
 .pageContactForm__form__item, .pageContactForm__form__item-textarea {
   width: 100%;
@@ -2608,6 +2613,9 @@ font-family: 'Roboto', sans-serif; */
     grid-template-columns: 1fr 1fr;
     max-width: 970px;
     gap: 30px;
+  }
+  .pageContactForm__form__formErrorMessage {
+    top: -30px;
   }
   .pageContactForm__form__item-textarea {
     grid-column-start: 1;

@@ -3,12 +3,18 @@
   margin: 10px auto 48px;
   &__form {
     display: grid;
+    position: relative;
     grid-template-columns: 1fr;
     gap: 16px;
     justify-content: space-between;
     justify-items: center;
     max-width: 375px;
     margin: 0 auto;
+    &__formErrorMessage {
+      @extend .pageDetailsAvailability__formErrorMessage;
+      top: -20px;
+      left: 0px;
+    }
     &__item {
       width: 100%;
       position: relative;
@@ -50,6 +56,9 @@
       grid-template-columns: 1fr 1fr;
       max-width: 970px;
       gap: 30px;
+      &__formErrorMessage {
+        top: -30px;
+      }
       &__item {
         &-textarea {
           grid-column-start: 1;

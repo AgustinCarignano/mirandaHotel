@@ -27,9 +27,9 @@ function checkInputs(arr) {
     var isValid = true;
     arr.forEach(function (input) {
         if (!input.value) {
-            input.style.border = "solid 1px red";
+            input.style.outline = "solid 1px red";
             input.addEventListener("focus", function () {
-                input.style.border = "none";
+                input.style.outline = "none";
             });
             isValid = false;
         }
